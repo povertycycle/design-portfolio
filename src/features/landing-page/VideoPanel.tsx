@@ -8,7 +8,7 @@ export const VideoPanel: React.FC = () => {
                 </h2>
             </div>
             <video
-                src="/video/landing-video.mp4"
+                src="/design-portfolio/video/landing-video.mp4"
                 className="w-full h-full object-cover left-0 top-0 m-auto"
                 muted
                 loop
