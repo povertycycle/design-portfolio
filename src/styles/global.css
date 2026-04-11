@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Smooch+Sans:wght@100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    --font-fjalla: 'Fjalla One', sans-serif;
+    --font-smooch: 'Smooch Sans', sans-serif;
+
+    --color-dark-blue: #0d1124;
+}
+
+@layer utilities {
+    .hidden-scroll::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+}
+
+body {
+	width: 100vw;
+	height: 100dvh;
+
+	@media screen and (min-width: 480px) {
+		height: 100vh;
+	}
+}
