@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
 import { SlideMenu } from "./SlideMenu";
 
@@ -7,8 +6,6 @@ import { SlideMenu } from "./SlideMenu";
  * [v2.0] - Header container component for landing page.
  */
 export const Navigation: React.FC = () => {
-    const pathname = usePathname();
-
     return (
         <div
             className={`bg-transparent transition-colors fixed top-0 left-0 w-full shrink-0 h-14 xs:h-20 flex items-center z-50`}
@@ -21,7 +18,7 @@ export const Navigation: React.FC = () => {
                 <Link href={"FAQS"}>
                     <TopMenu title="Support" />
                 </Link>
-                <Link href={"LOGIN"}>
+                <Link href="/auth/login">
                     <TopMenu title="Login" />
                 </Link>
                 <Link href={"REGISTER"}>
