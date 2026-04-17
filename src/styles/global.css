@@ -8,6 +8,7 @@
     --color-dark-blue: #0d1124;
 	--color-green-success: #14a620;
 	--color-red-error: #d60b0b;
+	--color-gold: #EFBF04;
 }
 
 @layer utilities {
