@@ -15,7 +15,7 @@ export const Navigation: React.FC = () => {
                 <Link href={"EXPLORE"}>
                     <TopMenu title={"Explore"} />
                 </Link>
-                <Link href={"FAQS"}>
+                <Link href={"/auth/questions"}>
                     <TopMenu title="Support" />
                 </Link>
                 <Link href="/auth/login">

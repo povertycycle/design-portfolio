@@ -20,6 +20,29 @@
 	.auth__input--default {
         @apply placeholder:text-white/60 placeholder:text-end focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-b-white/80 focus:border-b-white transition-colors border-b-white/60 border-b-2 w-full pb-1 focus:outline-none px-2;
     }
+
+	.faqs__input--search {
+        @apply rounded-full h-9 placeholder:text-white/60 pl-10 focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-white/80 focus:border-white transition-colors border-white/60 border-2 w-full focus:outline-none px-2;
+    }
+    .sleek-scroll {
+        @media screen and (min-width: 640px) {
+            &::-webkit-scrollbar {
+                overflow: hidden;
+                width: 6px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: #a7a7a7;
+                border-radius: 20px;
+            }
+            &::-webkit-scrollbar-thumb {
+                cursor: pointer;
+                background-clip: content-box;
+                border-radius: 20px;
+                background: #4da1d9;
+            }
+        }
+    }
+
 }
 
 body {
