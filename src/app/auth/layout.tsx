@@ -7,7 +7,7 @@ export default function AuthLayout({
 }) {
     return (
         <div
-            className={`bg-dark-blue w-screen h-dvh sm:h-screen flex flex-col overflow-y-auto font-fjalla`}
+            className={`bg-black w-screen h-dvh sm:h-screen flex flex-col overflow-y-auto font-fjalla`}
         >
             <LandingPageHeader />
             <div className="h-0 grow overflow-y-auto hidden-scroll w-full sm:max-md:p-4 flex flex-col">
@@ -26,7 +26,7 @@ const LandingPageHeader: React.FC = () => {
                 <Link href="/auth/explore">
                     <TopMenu title={"Explore"} />
                 </Link>
-                <Link href="/auth/support">
+                <Link href="/auth/questions">
                     <TopMenu title="Support" />
                 </Link>
                 <Link href="/auth/login">
