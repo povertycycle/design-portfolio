@@ -19,8 +19,21 @@ const LandingPage: React.FC = () => {
         >
             <Navigation />
             <VideoPanel />
-            {[0, 1, 2].map((num) => (
-                <Feature num={num} key={num} />
+            {[
+                {
+                    num: 0,
+                    image: "/design-portfolio/img/stocks/pexels-olgalioncat-7244431.jpg",
+                },
+                {
+                    num: 1,
+                    image: "/design-portfolio/img/stocks/pexels-thienleduyphoto-36820181.jpg",
+                },
+                {
+                    num: 2,
+                    image: "/design-portfolio/img/stocks/pexels-thienleduyphoto-36818882.jpg",
+                },
+            ].map(({ num, image }) => (
+                <Feature num={num} key={num} image={image} />
             ))}
             <AboutUs />
             <Questions />
