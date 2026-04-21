@@ -10,7 +10,13 @@ export const Register: React.FC = () => {
 
     return (
         <div className={"w-full h-full grid grid-cols-2 px-6 gap-16"}>
-            <div className="w-120 h-160 my-auto rounded-lg bg-white/75 ml-auto" />
+            <div className="w-120 h-160 my-auto ml-auto rounded-lg overflow-hidden relative z-1">
+                <img
+                    src="/design-portfolio/img/stocks/pexels-pexels-user-2161008279-37149787.jpg"
+                    alt="pexels-pexels-user-2161008279-37149787"
+                    className=""
+                />
+            </div>
             {!!success ? (
                 <RequireVerification />
             ) : (

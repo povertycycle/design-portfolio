@@ -7,9 +7,15 @@ export const Login: React.FC = () => {
     };
 
     return (
-        <div className={"w-full h-full grid grid-cols-2 px-6 gap-16"}>
+        <div className={"w-full h-full grid grid-cols-2 px-6 gap-16 relative"}>
             <Form onSuccess={onSuccess} />
-            <div className="w-120 h-160 my-auto rounded-lg bg-white/75" />
+            <div className="w-120 h-160 my-auto mr-auto rounded-lg overflow-hidden relative z-1">
+                <img
+                    src="/design-portfolio/img/stocks/pexels-thienleduyphoto-36809138.jpg"
+                    alt="pexels-thienleduyphoto-36809138"
+                    className=""
+                />
+            </div>
         </div>
     );
 };

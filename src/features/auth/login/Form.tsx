@@ -23,7 +23,7 @@ export const Form: React.FC<LoginFormProps> = ({ onSuccess }) => {
     };
 
     return (
-        <div className="bg-dark-blue max-w-xl w-full text-white flex flex-col my-auto ml-auto items-end">
+        <div className="max-w-xl text-white flex flex-col my-auto items-end ml-auto w-full relative z-1">
             {Toast}
             <span className="font-bold text-2xl/8">Hi, Welcome Back!</span>
             <div className="font-medium text-lg font-smooch">
