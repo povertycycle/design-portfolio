@@ -12,8 +12,8 @@ export const Navigation: React.FC = () => {
         >
             <SlideMenu />
             <div className="h-full relative z-1 flex justify-center sm:justify-end py-5 sm:py-3 sm:px-12 gap-8 w-full text-white text-sm sm:text-xl font-medium tracking-wider">
-                <Link href={"EXPLORE"}>
-                    <TopMenu title={"Explore"} />
+                <Link href={"/designs"}>
+                    <TopMenu title={"Designs"} />
                 </Link>
                 <Link href={"/auth/questions"}>
                     <TopMenu title="Support" />
@@ -21,7 +21,7 @@ export const Navigation: React.FC = () => {
                 <Link href="/auth/login">
                     <TopMenu title="Login" />
                 </Link>
-                <Link href={"REGISTER"}>
+                <Link href={"/auth/register"}>
                     <TopMenu title="Join Us" />
                 </Link>
             </div>
