@@ -24,7 +24,7 @@ const LandingPageHeader: React.FC = () => {
         >
             <div className="h-full relative z-1 flex justify-end py-3 px-12 gap-8 w-full text-white text-xl font-medium tracking-wider">
                 <Link href="/designs">
-                    <TopMenu title={"Desgins"} />
+                    <TopMenu title={"Designs"} />
                 </Link>
                 <Link href="/auth/questions">
                     <TopMenu title="Support" />
