@@ -1,5 +1,6 @@
 import { Hyperlink } from "@/src/libraries/link/Hyperlink";
-import { INSTRAGRAM_URL, SUPPORT_MAIL } from "../constants";
+import { SUPPORT_MAIL } from "../constants";
+import { INSTRAGRAM_URL } from "@/src/constants/profile";
 
 export const QUESTION_LIST = [
     {

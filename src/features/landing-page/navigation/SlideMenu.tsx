@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { Fragment, useEffect, useRef } from "react";
-import {
-    LANDING_CONTAINER_ID,
-    LANDING_NAV,
-    PROFILE_SOCIAL_MEDIA,
-} from "../constants";
+import { LANDING_CONTAINER_ID, LANDING_NAV } from "../constants";
+import { PROFILE_SOCIAL_MEDIA } from "@/src/constants/profile";
 
 export const SlideMenu: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null);
