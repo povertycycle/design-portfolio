@@ -7,7 +7,7 @@ export const MainNews: React.FC<NewsData> = ({
     summary,
 }) => {
     return (
-        <div className="relative w-full h-180 flex items-center overflow-hidden group-odd:order-1 group-odd:rounded-l-xl group-even:order-2 group-even:rounded-r-xl">
+        <div className="relative w-full h-180 flex items-center overflow-hidden group-odd:order-1 group-even:rounded-l-xl group-even:order-2 group-odd:rounded-r-xl">
             <img
                 alt={coverArt}
                 src={`/design-portfolio/img/${coverArt}`}
@@ -20,8 +20,8 @@ export const MainNews: React.FC<NewsData> = ({
                     year: "numeric",
                 })}
             </div>
-            <div className="flex flex-col group-odd:items-end justify-end h-full gap-8 py-4 px-8 w-full relative bg-black/55">
-                <h1 className="text-8xl group-even:ml-auto group-odd:mr-auto mb-8 px-4 opacity-65">
+            <div className="flex flex-col group-odd:items-end justify-end h-full gap-8 py-6 px-8 w-full relative bg-black/55">
+                <h1 className="text-8xl group-even:ml-auto group-odd:mr-auto mb-8 px-4 opacity-50">
                     {header}
                 </h1>
                 <span className="font-smooch text-2xl group-odd:text-end max-w-160 opacity-85 font-medium tracking-wide">

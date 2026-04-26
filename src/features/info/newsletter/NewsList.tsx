@@ -32,7 +32,7 @@ export const NewsList: React.FC<{ similarStories: SimilarStories[] }> = ({
                     </div>
                 </div>
             ))}
-            <span className="mt-8 pl-3 mx-auto opacity-65 hover:opacity-95 flex items-center gap-2 cursor-pointer">
+            <span className="mt-8 pl-5 mx-auto opacity-65 hover:opacity-95 flex items-center gap-2 cursor-pointer">
                 Load more news <i className="ri-arrow-down-s-line text-xl" />
             </span>
         </div>
