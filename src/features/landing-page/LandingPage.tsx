@@ -22,15 +22,15 @@ const LandingPage: React.FC = () => {
             {[
                 {
                     num: 0,
-                    image: "/design-portfolio/img/stocks/pexels-olgalioncat-7244431.jpg",
+                    image: "/design-portfolio/img/pexels-olgalioncat-7244431.jpg",
                 },
                 {
                     num: 1,
-                    image: "/design-portfolio/img/stocks/pexels-thienleduyphoto-36820181.jpg",
+                    image: "/design-portfolio/img/pexels-thienleduyphoto-36820181.jpg",
                 },
                 {
                     num: 2,
-                    image: "/design-portfolio/img/stocks/pexels-thienleduyphoto-36818882.jpg",
+                    image: "/design-portfolio/img/pexels-thienleduyphoto-36818882.jpg",
                 },
             ].map(({ num, image }) => (
                 <Feature num={num} key={num} image={image} />

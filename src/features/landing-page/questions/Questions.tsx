@@ -9,7 +9,7 @@ export const Questions: React.FC = () => {
             <div className="absolute w-full h-full z-0">
                 <img
                     alt="pexels-zak-mogel-2158251013-35883712"
-                    src="/design-portfolio/img/stocks/pexels-zak-mogel-2158251013-35883712.jpg"
+                    src="/design-portfolio/img/pexels-zak-mogel-2158251013-35883712.jpg"
                     className="object-cover w-full h-full"
                 />
             </div>

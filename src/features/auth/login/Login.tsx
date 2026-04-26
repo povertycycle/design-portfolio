@@ -11,7 +11,7 @@ export const Login: React.FC = () => {
             <Form onSuccess={onSuccess} />
             <div className="w-120 h-160 my-auto mr-auto rounded-lg overflow-hidden relative z-1">
                 <img
-                    src="/design-portfolio/img/stocks/pexels-thienleduyphoto-36809138.jpg"
+                    src="/design-portfolio/img/pexels-thienleduyphoto-36809138.jpg"
                     alt="pexels-thienleduyphoto-36809138"
                     className=""
                 />

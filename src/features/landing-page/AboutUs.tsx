@@ -8,7 +8,7 @@ export const AboutUs: React.FC = () => {
                 <img
                     className="object-cover w-full"
                     alt="pexels-efe-ersoy-393937500-36701720"
-                    src="/design-portfolio/img/stocks/pexels-efe-ersoy-393937500-36701720.jpg"
+                    src="/design-portfolio/img/pexels-efe-ersoy-393937500-36701720.jpg"
                 />
             </div>
             <div className="flex w-full h-full relative items-center justify-center bg-black/65 z-1 p-24">
@@ -17,7 +17,7 @@ export const AboutUs: React.FC = () => {
                         <img
                             className="object-cover rounded-lg h-full"
                             alt="pexels-raymond-petrik-1448389535-27829411"
-                            src="/design-portfolio/img/stocks/pexels-raymond-petrik-1448389535-27829411.jpg"
+                            src="/design-portfolio/img/pexels-raymond-petrik-1448389535-27829411.jpg"
                         />
                     </div>
                     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-white flex flex-col">
