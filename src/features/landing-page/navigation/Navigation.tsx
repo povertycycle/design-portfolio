@@ -11,6 +11,12 @@ export const Navigation: React.FC = () => {
             className={`bg-transparent transition-colors fixed top-0 left-0 w-full shrink-0 h-14 xs:h-20 flex items-center z-50`}
         >
             <SlideMenu />
+            <Link
+                href="/"
+                className="h-full aspect-square text-white flex items-center justify-center text-2xl"
+            >
+                <i className="ri-home-2-fill" />
+            </Link>
             <div className="h-full relative z-1 flex justify-center sm:justify-end py-5 sm:py-3 sm:px-12 gap-8 w-full text-white text-sm sm:text-xl font-medium tracking-wider">
                 <Link href={"/designs"}>
                     <TopMenu title={"Designs"} />

@@ -8,23 +8,19 @@ export const Feature: React.FC<FeatureProps> = ({ num, image }) => {
     return (
         <article
             id={`landing-feature-${num}`}
-            className="w-screen h-dvh sm:h-screen shrink-0 flex flex-col items-center justify-center bg-black relative overflow-hidden"
+            className="w-screen h-dvh sm:h-screen group shrink-0 flex flex-col items-center justify-center bg-black relative overflow-hidden"
         >
             <div
-                className={`w-full h-full flex ${
-                    isOdd ? "flex-row-reverse" : ""
-                } items-center justify-center gap-8 text-white`}
+                className={`w-full h-full flex group-even:flex-row-reverse items-center justify-center gap-8 text-white`}
             >
                 <img alt={image} src={image} className="object-cover" />
                 <div
                     className={`flex flex-col absolute w-full justify-center h-full px-24 bg-black/65`}
                 >
                     <div
-                        className={`flex flex-col max-w-7xl w-full mx-auto mt-20  ${
-                            isOdd ? "items-start" : "items-end"
-                        }`}
+                        className={`flex flex-col max-w-7xl w-full mx-auto mt-20 group-even:items-start group-odd:items-end`}
                     >
-                        <div className="px-7 py-8 bg-white/5 backdrop-blur-sm rounded-2xl max-w-120 flex flex-col">
+                        <div className="px-7 py-8 bg-white/2 backdrop-blur-sm rounded-2xl max-w-120 flex flex-col">
                             <h1
                                 className={`text-3xl mt-1 ${
                                     isOdd ? "" : "ml-auto"
@@ -32,7 +28,7 @@ export const Feature: React.FC<FeatureProps> = ({ num, image }) => {
                             >
                                 Feature Title
                             </h1>
-                            <h2 className="text-2xl italic mt-4 font-smooch text-gray-300 font-medium">
+                            <h2 className="text-xl group-odd:text-end italic mt-4 font-smooch text-gray-300 font-medium">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Sed posuere mattis mi. Etiam in
                                 turpis odio. Nulla facilisi. Nunc eget ante id

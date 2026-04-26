@@ -7,7 +7,7 @@ export const Newsletter: React.FC = () => {
     return (
         <div className="w-full h-full overflow-y-auto bg-black text-white font-fjalla flex flex-col">
             <LandingHeader />
-            <div className="w-full flex flex-col mt-24 gap-24">
+            <div className="w-full flex flex-col mt-26 gap-24">
                 {NEWSLETTERS.map((newsletter, i) => (
                     <MainStory
                         key={newsletter.header}
@@ -84,7 +84,7 @@ const NEWSLETTERS = [
             },
             {
                 header: "History news 2",
-                coverArt: "pexels-zak-mogel-2158251013-35883712.jpg",
+                coverArt: "pexels-erkocphoto-32146234.jpg",
                 postedAt: "2025-07-02T14:18:51.719Z",
             },
             {

@@ -5,6 +5,12 @@ export const LandingHeader: React.FC = () => {
         <div
             className={`bg-transparent fixed top-0 left-0 w-full shrink-0 flex items-center z-50`}
         >
+            <Link
+                href="/"
+                className="h-full aspect-square text-white flex items-center justify-center text-2xl px-4"
+            >
+                <i className="ri-home-2-fill" />
+            </Link>
             <div className="h-full relative z-1 flex justify-end py-3 px-12 gap-8 w-full text-white text-xl font-medium tracking-wider">
                 <Link href="/designs">
                     <TopMenu title={"Designs"} />

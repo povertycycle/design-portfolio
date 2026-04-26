@@ -20,7 +20,7 @@ export const AboutUs: React.FC = () => {
                             src="/design-portfolio/img/pexels-raymond-petrik-1448389535-27829411.jpg"
                         />
                     </div>
-                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-white flex flex-col">
+                    <div className="bg-white/2 backdrop-blur-sm rounded-2xl p-8 text-white flex flex-col">
                         <div className="flex text-gray-200 font-medium text-end leading-8 tracking-wide text-2xl font-smooch">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur

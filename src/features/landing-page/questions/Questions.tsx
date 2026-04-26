@@ -8,8 +8,8 @@ export const Questions: React.FC = () => {
         >
             <div className="absolute w-full h-full z-0">
                 <img
-                    alt="pexels-zak-mogel-2158251013-35883712"
-                    src="/design-portfolio/img/pexels-zak-mogel-2158251013-35883712.jpg"
+                    alt="pexels-erkocphoto-32146234"
+                    src="/design-portfolio/img/pexels-erkocphoto-32146234.jpg"
                     className="object-cover w-full h-full"
                 />
             </div>
@@ -18,7 +18,7 @@ export const Questions: React.FC = () => {
                     {QUESTION_LIST.map(({ question, answer }, i) => (
                         <div
                             key={question}
-                            className="flex flex-col px-5 pt-6 bg-white/5 backdrop-blur-sm rounded-xl"
+                            className="flex flex-col px-5 pt-6 bg-white/2 backdrop-blur-sm rounded-xl"
                             style={{
                                 marginLeft:
                                     i % 2 === 1 ? "auto" : `${i * 16}px`,
