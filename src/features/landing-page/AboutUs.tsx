@@ -15,12 +15,12 @@ export const AboutUs: React.FC = () => {
                 <div className="w-full max-w-7xl grid grid-cols-[300px_auto] gap-8 h-140">
                     <div className="h-full shrink-0 relative z-1 mb-20">
                         <img
-                            className="object-cover rounded-lg h-full"
+                            className="object-cover rounded-2xl h-full"
                             alt="pexels-raymond-petrik-1448389535-27829411"
                             src="/design-portfolio/img/pexels-raymond-petrik-1448389535-27829411.jpg"
                         />
                     </div>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-white flex flex-col">
+                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-white flex flex-col">
                         <div className="flex text-gray-200 font-medium text-end leading-8 tracking-wide text-2xl font-smooch">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur

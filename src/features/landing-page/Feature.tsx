@@ -15,11 +15,7 @@ export const Feature: React.FC<FeatureProps> = ({ num, image }) => {
                     isOdd ? "flex-row-reverse" : ""
                 } items-center justify-center gap-8 text-white`}
             >
-                <img
-                    alt={image}
-                    src={image}
-                    className="rounded-lg object-cover"
-                />
+                <img alt={image} src={image} className="object-cover" />
                 <div
                     className={`flex flex-col absolute w-full justify-center h-full px-24 bg-black/65`}
                 >
@@ -28,7 +24,7 @@ export const Feature: React.FC<FeatureProps> = ({ num, image }) => {
                             isOdd ? "items-start" : "items-end"
                         }`}
                     >
-                        <div className="p-10 bg-white/10 backdrop-blur-sm rounded-lg max-w-120 flex flex-col">
+                        <div className="px-7 py-8 bg-white/5 backdrop-blur-sm rounded-2xl max-w-120 flex flex-col">
                             <h1
                                 className={`text-3xl mt-1 ${
                                     isOdd ? "" : "ml-auto"

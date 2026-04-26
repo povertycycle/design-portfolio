@@ -17,7 +17,7 @@ export const Form: React.FC<RegisterFormProps> = ({ onSuccess }) => {
     };
 
     return (
-        <div className="bg-dark-blue max-w-xl text-white flex flex-col my-auto w-full">
+        <div className="max-w-xl text-white flex flex-col my-auto w-full relative z-1">
             {Toast}
             <span className="font-bold text-2xl/8">Hello there!</span>
             <div className="flex gap-1 leading-7 font-medium text-xl font-smooch">

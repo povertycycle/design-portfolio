@@ -18,7 +18,7 @@ export const Questions: React.FC = () => {
                     {QUESTION_LIST.map(({ question, answer }, i) => (
                         <div
                             key={question}
-                            className="flex flex-col px-4 pt-6 bg-white/10 backdrop-blur-sm rounded-lg"
+                            className="flex flex-col px-5 pt-6 bg-white/5 backdrop-blur-sm rounded-xl"
                             style={{
                                 marginLeft:
                                     i % 2 === 1 ? "auto" : `${i * 16}px`,
@@ -34,7 +34,7 @@ export const Questions: React.FC = () => {
                                 {question}
                             </span>
                             <div
-                                className={`peer-focus:max-h-71 mt-6 peer-focus:mb-6 transition-[max-height,margin] max-h-0 overflow-hidden text-gray-300 font-smooch text-base sm:text-2xl tracking-wide font-medium`}
+                                className={`font-smooch peer-focus:max-h-71 mt-6 peer-focus:mb-5 transition-[max-height,margin] max-h-0 overflow-hidden text-gray-300 text-base sm:text-2xl tracking-wide font-medium`}
                             >
                                 {answer}
                             </div>
