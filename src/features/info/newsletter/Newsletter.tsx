@@ -5,8 +5,7 @@ import { MainStory } from "./MainStory";
 
 export const Newsletter: React.FC = () => {
     return (
-        <div className="w-full h-full overflow-y-auto bg-black text-white font-fjalla flex flex-col">
-            <LandingHeader />
+        <>
             <div className="w-full flex flex-col mt-26 gap-24">
                 {NEWSLETTERS.map((newsletter, i) => (
                     <MainStory
@@ -17,7 +16,7 @@ export const Newsletter: React.FC = () => {
                 ))}
             </div>
             <Footer />
-        </div>
+        </>
     );
 };
 
