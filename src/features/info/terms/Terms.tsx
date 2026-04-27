@@ -694,7 +694,6 @@ export const Terms: React.FC = () => {
                 <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
                     <li>
                         Nam congue porttitor justo, at luctus magna viverra ut.
-                        .
                     </li>
                     <li>
                         Nullam vel vulputate sapien. Mauris convallis, arcu eu
