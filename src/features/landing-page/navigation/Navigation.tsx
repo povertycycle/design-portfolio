@@ -1,16 +1,34 @@
+import { ScrollNavs } from "@/src/libraries/navigation/ScrollNavs";
 import Link from "next/link";
 import React from "react";
-import { SlideMenu } from "./SlideMenu";
+import { LANDING_CONTAINER_ID, LANDING_NAV } from "../constants";
 
-/**
- * [v2.0] - Header container component for landing page.
- */
 export const Navigation: React.FC = () => {
     return (
         <div
             className={`bg-transparent transition-colors fixed top-0 left-0 w-full shrink-0 h-14 xs:h-20 flex items-center z-50`}
         >
-            <SlideMenu />
+            <ScrollNavs
+                contentIds={LANDING_NAV.map(({ anchorId }) => anchorId)}
+                containerId={LANDING_CONTAINER_ID}
+            >
+                {LANDING_NAV.map(({ text, anchorId }) => (
+                    <div
+                        key={anchorId}
+                        className="flex flex-row-reverse items-center gap-4 -mr-1.25 transition-[transform]"
+                    >
+                        <div className="w-3 h-3 rounded-full bg-gray-300" />
+                        <Link
+                            href={`#${anchorId}`}
+                            className="hover:text-white transition-opacity"
+                        >
+                            <span className="transition-opacity whitespace-nowrap opacity-60">
+                                {text}
+                            </span>
+                        </Link>
+                    </div>
+                ))}
+            </ScrollNavs>
             <Link
                 href="/"
                 className="h-full aspect-square text-white flex items-center justify-center text-2xl"
@@ -35,9 +53,6 @@ export const Navigation: React.FC = () => {
     );
 };
 
-/**
- * [v2.0] - Custom helper component for hover animation.
- */
 const TopMenu: React.FC<{ title: string }> = ({ title }) => {
     return (
         <span className="whitespace-nowrap opacity-65 hover:opacity-100">

@@ -1,33 +1,50 @@
-import Link from "next/link";
-import { Fragment, useEffect, useRef } from "react";
-import { LANDING_CONTAINER_ID, LANDING_NAV } from "../constants";
 import { PROFILE_SOCIAL_MEDIA } from "@/src/constants/profile";
+import Link from "next/link";
+import { Fragment, RefObject, useEffect, useRef } from "react";
 
-export const SlideMenu: React.FC = () => {
+interface ScrollNavsProps {
+    containerId: string;
+    contentIds: string[];
+    children: React.ReactNode;
+}
+
+export const ScrollNavs: React.FC<ScrollNavsProps> = ({
+    containerId,
+    contentIds,
+    children,
+}) => {
     const ref = useRef<HTMLDivElement>(null);
+    const scrollCache = useRef<number[] | null>(null);
+
     function intializeScroller() {
-        const elem = document.getElementById(LANDING_CONTAINER_ID);
+        const elem = document.getElementById(containerId);
         if (!elem) {
             return;
         }
 
+        const scrollLevel = getScrollLevel(scrollCache, contentIds) ?? [];
+
         elem.onscroll = () => {
-            const factor = elem.scrollTop / window.innerHeight;
             if (!ref.current) {
                 return;
             }
 
             ref.current.childNodes.forEach((child, i) => {
                 const node = child as HTMLDivElement;
-                node.style.transform = `translateY(-${
-                    factor <= i ? 0 : Math.min(1, factor - i) * 25
-                }vh)`;
-                const span = node.getElementsByTagName("a")?.[0];
+                const lower = scrollLevel[i],
+                    upper = scrollLevel[i + 1];
+                const factor =
+                    elem.scrollTop <= lower
+                        ? 0
+                        : elem.scrollTop >= upper
+                        ? 1
+                        : elem.scrollTop / upper;
+
+                node.style.transform = `translateY(-${factor * 25}vh)`;
+                const span = node.getElementsByTagName("span")?.[0];
                 if (span) {
                     span.style.opacity = `${
-                        factor > i + 1 || factor < i + 0.1 || factor === 0
-                            ? 0.6
-                            : 1
+                        factor >= 1 || factor <= 0 ? 0.6 : 1
                     }`;
                 }
             });
@@ -42,33 +59,15 @@ export const SlideMenu: React.FC = () => {
         <div className="h-dvh sm:h-screen fixed right-6 top-0 flex flex-col justify-end items-end">
             <div
                 ref={ref}
-                className="bg-gray-300 w-0.5 h-full right-0 flex flex-col items-end justify-end gap-6 text-sm sm:text-lg font-raleway text-gray-300 font-medium"
+                className="bg-gray-300 w-0.5 h-full right-0 flex flex-col items-end justify-end gap-6 text-lg font-raleway text-gray-300 font-medium"
             >
-                {LANDING_NAV.map(({ text, anchorId }, i) => (
-                    <div
-                        key={anchorId}
-                        className="flex flex-row-reverse items-center gap-4 -mr-1.25 transition-[transform]"
-                    >
-                        <div className="w-3 h-3 rounded-full bg-gray-300" />
-                        <Link
-                            href={`#${anchorId}`}
-                            className="hover:text-white transition-opacity opacity-60"
-                        >
-                            <span className="transition-opacity whitespace-nowrap">
-                                {text}
-                            </span>
-                        </Link>
-                    </div>
-                ))}
+                {children}
             </div>
             <CompanySocials />
         </div>
     );
 };
 
-/**
- * [v2.0] - Company social media icons and redirection to their urls.
- */
 const CompanySocials: React.FC = () => {
     return (
         <div className="flex flex-col items-end">
@@ -90,3 +89,24 @@ const CompanySocials: React.FC = () => {
         </div>
     );
 };
+
+function getScrollLevel(
+    cache: RefObject<number[] | null>,
+    contentIds: string[]
+) {
+    if (!document || !window || contentIds.length === 0) {
+        return;
+    }
+
+    if (!cache.current) {
+        const elements = contentIds.map((id) => document.getElementById(id));
+        const threshold = [0];
+        elements.forEach((element) => {
+            const bound = element?.getBoundingClientRect();
+            threshold.push(bound ? bound.top : 0);
+        });
+        cache.current = threshold;
+    }
+
+    return cache.current;
+}
