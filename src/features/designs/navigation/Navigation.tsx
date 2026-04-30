@@ -9,7 +9,7 @@ export const Navigation: React.FC = () => {
     return (
         <div
             className={`${
-                compressed ? "w-16" : "w-60"
+                compressed ? "w-16.5" : "w-60"
             } transition-[width] duration-500 border-r-2 border-white/35 flex flex-col h-full text-gray-300 text-lg shrink-0 relative`}
         >
             <div
