@@ -18,7 +18,7 @@
     }
 
 	.auth__input--default {
-        @apply placeholder:text-white/60 placeholder:text-end focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-b-white/80 focus:border-b-white transition-colors border-b-white/60 border-b-2 w-full pb-1 focus:outline-none px-2;
+        @apply placeholder:text-white/60 placeholder:text-end focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-b-white/80 focus:border-b-white transition-colors border-b-white/60 border-b-2 w-full h-8 focus:outline-none px-2;
     }
 
 	.faqs__input--search {

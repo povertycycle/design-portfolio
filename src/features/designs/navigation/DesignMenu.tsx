@@ -16,7 +16,7 @@ export const DesignMenu: React.FC = () => {
                 <div className="flex flex-col font-smooch mt-2 gap-2 w-full">
                     {MENU.map(({ title, url }) => (
                         <Link
-                            href={url}
+                            href={`/designs/${url}`}
                             key={title}
                             className="flex gap-4 w-full items-center h-10 hover:bg-white/20 cursor-pointer px-3 rounded-md"
                         >
@@ -29,8 +29,8 @@ export const DesignMenu: React.FC = () => {
     );
 };
 const MENU = [
+    { title: "Inputs", url: "inputs" },
     { title: "Navigaions", url: "navigations" },
     { title: "Buttons", url: "buttons" },
-    { title: "Inputs", url: "inputs" },
     { title: "Cards", url: "cards" },
 ];

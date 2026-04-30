@@ -31,7 +31,7 @@ export const SupportMenu: React.FC = () => {
                     key={url}
                     href={url}
                     target={target}
-                    className={`h-10 pr-3 w-full hover:bg-white/20 rounded-md flex gap-8 items-center text-lg`}
+                    className={`h-10 pr-3 w-full hover:bg-white/20 rounded-md flex gap-4 items-center text-lg`}
                 >
                     <div className="h-full aspect-square flex items-center justify-center">
                         <i className={`${icon} text-xl`} />
