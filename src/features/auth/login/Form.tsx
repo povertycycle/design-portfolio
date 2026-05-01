@@ -6,6 +6,7 @@ import { ChangeEvent, useState } from "react";
 import { LoginPayload } from "./types";
 import { Spinner } from "@/src/libraries/loading/Spinner";
 import { AlternativeSignIn } from "../external/AlternativeSignIn";
+import { PasswordInput } from "@/src/libraries/inputs/PasswordInput";
 
 interface LoginFormProps {
     onSuccess?: (res: UserData) => void;
@@ -81,15 +82,12 @@ const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
                 value={formData.email ?? ""}
                 onChange={handleChange("email")}
             />
-            <InputPassword
-                value={formData.password ?? ""}
-                onChange={handleChange("password")}
-            />
+            <PasswordInput />
             <ForgotPassword />
             <div className="flex justify-between w-full">
                 <AlternativeSignIn />
                 <button
-                    disabled={!formData.email || !formData.password}
+                    disabled={!formData.email}
                     className={`${
                         loading
                             ? ""
@@ -101,42 +99,6 @@ const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
                 </button>
             </div>
         </form>
-    );
-};
-
-/**
- * [v2.0] - Validate password helper.
- */
-function validatePassword(password: string | null) {
-    return password ? null : "Please fill in your password.";
-}
-
-const InputPassword: React.FC<{
-    value?: string;
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-}> = ({ value, onChange }) => {
-    const [show, setShow] = useState<boolean>(false);
-    return (
-        <div className="w-full flex relative">
-            <input
-                className="peer auth__input--default"
-                placeholder="Password"
-                value={value}
-                spellCheck={false}
-                type={show ? "text" : "password"}
-                onChange={onChange}
-            />
-            <div
-                onClick={() => setShow((prev) => !prev)}
-                className="w-9 h-9 rounded-full border-2 border-white/60 hover:border-white/80 peer-hover:text-white/80 peer-hover:border-white/80 hover:text-white/80 peer-focus:border-white/80 transition-colors absolute text-white/60 peer-focus:text-white/80 left-full top-1/2 flex items-center justify-center text-base cursor-pointer"
-            >
-                <i
-                    className={`${
-                        show ? "ri-eye-line" : "ri-eye-off-line"
-                    } m-auto`}
-                />
-            </div>
-        </div>
     );
 };
 
