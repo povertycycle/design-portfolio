@@ -2,7 +2,7 @@ const EXTERNAL_OAUTH = ["facebook", "twitter-x", "google", "linkedin"];
 
 export const AlternativeSignIn: React.FC = () => {
     return (
-        <div className="flex gap-4 text-dark-blue text-lg">
+        <div className="flex gap-4 text-black text-lg">
             {EXTERNAL_OAUTH.map((oauth) => (
                 <div
                     key={oauth}

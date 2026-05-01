@@ -93,7 +93,7 @@ const Fields: React.FC<RegisterFormProps> = ({ onSuccess }) => {
                         loading
                             ? ""
                             : "not-disabled:cursor-pointer not-disabled:hover:bg-white/95"
-                    } bg-white text-dark-blue disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-bold py-1 flex items-center justify-center`}
+                    } bg-white text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-bold py-1 flex items-center justify-center`}
                     onClick={validatePayload}
                 >
                     {loading ? <Spinner /> : "Register"}

@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                     autoComplete="email"
                 />
                 <button
-                    className={`bg-white/90 hover:brightness-95 mt-8 ml-auto text-dark-blue cursor-pointer rounded-sm px-4 w-32 group h-9 py-1 flex items-center justify-center`}
+                    className={`bg-white/90 hover:brightness-95 mt-8 ml-auto text-black cursor-pointer rounded-sm px-4 w-32 group h-9 py-1 flex items-center justify-center`}
                 >
                     Subscribe
                 </button>

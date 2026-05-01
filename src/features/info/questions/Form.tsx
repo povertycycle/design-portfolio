@@ -12,7 +12,7 @@ export const Form: React.FC = () => {
                 placeholder="Message"
             />
             <button
-                className={`ml-auto bg-white mt-8 text-dark-blue disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group py-1 flex items-center justify-center`}
+                className={`ml-auto bg-white mt-8 text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group py-1 flex items-center justify-center`}
             >
                 {loading ? <Spinner /> : "Ask Us"}
             </button>

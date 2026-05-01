@@ -42,7 +42,7 @@ const Toast: React.FC<ToastProps> = ({ data, duration, remove }) => {
             default:
                 return {
                     remixicon: "ri-information-fill",
-                    color: "text-dark-blue",
+                    color: "text-black",
                 };
         }
     })();
