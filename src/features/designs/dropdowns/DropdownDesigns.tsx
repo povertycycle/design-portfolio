@@ -1,18 +1,17 @@
-import { LabelInput } from "@/src/libraries/components/inputs/LabelInput";
-import { LabelPasswordInput } from "@/src/libraries/components/inputs/LabelPasswordInput";
-import { PasswordInput } from "@/src/libraries/components/inputs/PasswordInput";
-import { PinInput } from "@/src/libraries/components/inputs/PinInput";
-import { SearchInput } from "@/src/libraries/components/inputs/SearchInput";
-import { UnderlinedInput } from "@/src/libraries/components/inputs/UnderlinedInput";
+import { NotificationSystem } from "@/src/libraries/components/dropdowns/NotificationSystem";
 
 export const DropdownDesigns: React.FC = () => {
     return (
-        <div className="w-full h-full flex flex-col px-8 py-16 text-white">
-            <h1 className="text-2xl">Dropdown Designs</h1>
-            <div className="h-full overflow-y-auto sleek-scroll w-full flex flex-col mt-16 gap-12">
-                <div className="grid grid-cols-[216px_auto] gap-6 h-10 content-evenly ">
-                    <span className="my-auto">Basic Notification</span>
-                </div>
+        <div className="h-full pb-24 text-white w-full overflow-y-auto sleek-scroll ">
+            <h1 className="text-2xl px-16 pt-6 pb-6 mb-24 w-full z-50 sticky top-0 bg-black border-b border-white/50">
+                Dropdown Designs
+            </h1>
+            <div className="w-lg flex flex-col mx-auto">
+                <span className="my-auto text-xl">Notification System</span>
+                <span className="opacity-75 italic text-base mt-1 mb-6 font-smooch">
+                    Dropdown, Notification
+                </span>
+                <NotificationSystem />
             </div>
         </div>
     );

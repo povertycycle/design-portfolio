@@ -18,7 +18,7 @@ export const InputDesigns: React.FC = () => {
                 </span>
                 <UnderlinedInput placeholder="Fullname" />
             </div>
-            <div className="my-24 w-full h-px bg-white/25" />
+            <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Password Input</span>
                 <span className="opacity-75 italic text-base mt-1 mb-2 font-smooch">
@@ -26,7 +26,7 @@ export const InputDesigns: React.FC = () => {
                 </span>
                 <PasswordInput />
             </div>
-            <div className="my-24 w-full h-px bg-white/25" />
+            <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Labelled Input</span>
                 <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
@@ -35,7 +35,7 @@ export const InputDesigns: React.FC = () => {
                 </span>
                 <LabelInput placeholder="Fullname" />
             </div>
-            <div className="my-24 w-full h-px bg-white/25" />
+            <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Labelled Password Input</span>
                 <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
@@ -43,7 +43,7 @@ export const InputDesigns: React.FC = () => {
                 </span>
                 <LabelPasswordInput />
             </div>
-            <div className="my-24 w-full h-px bg-white/25" />
+            <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Input Search</span>
                 <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
@@ -51,7 +51,7 @@ export const InputDesigns: React.FC = () => {
                 </span>
                 <SearchInput placeholder="Search name" />
             </div>
-            <div className="my-24 w-full h-px bg-white/25" />
+            <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Input Pin</span>
                 <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
