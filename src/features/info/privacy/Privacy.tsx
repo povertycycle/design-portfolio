@@ -1,4 +1,4 @@
-import { ScrollNavs } from "@/src/libraries/navigation/ScrollNavs";
+import { ScrollNavs } from "@/src/libraries/components/navigation/ScrollNavs";
 import { PRIVACY_SECTIONS } from "./Policies";
 
 const CONTAINER_ID = "privacy-policy-sidebar";
@@ -46,7 +46,7 @@ export const PrivacyPolicy: React.FC = () => {
                     amet. Aliquam aliquam in nunc sed accumsan. Cras in
                     hendrerit nibh. Mauris ultricies dignissim orci eu bibendum.
                 </h2>
-                <h3 className="flex flex gap-4 w-full mt-16">
+                <h3 className="flex gap-4 w-full mt-16">
                     <div className="w-28 h-28 flex items-center justify-center">
                         <i className="ri-shield-user-line text-5xl my-auto" />
                     </div>

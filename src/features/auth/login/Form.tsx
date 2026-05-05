@@ -1,12 +1,12 @@
 import { USER_DATA } from "@/src/constants/users";
 import { UserData } from "@/src/interfaces/user";
-import { Hyperlink } from "@/src/libraries/link/Hyperlink";
-import useToast from "@/src/libraries/notification/Toast";
+import { Hyperlink } from "@/src/libraries/components/link/Hyperlink";
+import useToast from "@/src/libraries/components/notification/Toast";
 import { ChangeEvent, useState } from "react";
 import { LoginPayload } from "./types";
-import { Spinner } from "@/src/libraries/loading/Spinner";
+import { Spinner } from "@/src/libraries/components/loading/Spinner";
 import { AlternativeSignIn } from "../external/AlternativeSignIn";
-import { PasswordInput } from "@/src/libraries/inputs/PasswordInput";
+import { PasswordInput } from "@/src/libraries/components/inputs/PasswordInput";
 
 interface LoginFormProps {
     onSuccess?: (res: UserData) => void;

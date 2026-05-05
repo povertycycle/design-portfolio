@@ -1,4 +1,4 @@
-import { Spinner } from "@/src/libraries/loading/Spinner";
+import { Spinner } from "@/src/libraries/components/loading/Spinner";
 import { useState } from "react";
 
 export const Form: React.FC = () => {

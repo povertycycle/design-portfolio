@@ -1,5 +1,5 @@
 import { useId, useState } from "react";
-import { useBlur } from "../dom/useBlur";
+import { useBlur } from "../../hooks/useBlur";
 import { SearchContent } from "../list/SearchContent";
 
 interface SearchInputProps {

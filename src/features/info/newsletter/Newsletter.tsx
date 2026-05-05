@@ -1,4 +1,4 @@
-import { LandingHeader } from "@/src/libraries/navigation/LandingHeader";
+import { LandingHeader } from "@/src/libraries/components/navigation/LandingHeader";
 import React from "react";
 import { Footer } from "./Footer";
 import { MainStory } from "./MainStory";

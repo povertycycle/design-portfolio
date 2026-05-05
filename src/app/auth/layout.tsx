@@ -1,4 +1,4 @@
-import { LandingHeader } from "@/src/libraries/navigation/LandingHeader";
+import { LandingHeader } from "@/src/libraries/components/navigation/LandingHeader";
 
 export default function AuthLayout({
     children,

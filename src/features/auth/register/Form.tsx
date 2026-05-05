@@ -1,8 +1,8 @@
-import { Hyperlink } from "@/src/libraries/link/Hyperlink";
-import useToast from "@/src/libraries/notification/Toast";
+import { Hyperlink } from "@/src/libraries/components/link/Hyperlink";
+import useToast from "@/src/libraries/components/notification/Toast";
 import { ChangeEvent, useState } from "react";
 import { RegisterPayload } from "./types";
-import { Spinner } from "@/src/libraries/loading/Spinner";
+import { Spinner } from "@/src/libraries/components/loading/Spinner";
 import { AlternativeSignIn } from "../external/AlternativeSignIn";
 
 interface RegisterFormProps {

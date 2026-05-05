@@ -1,4 +1,4 @@
-import { ScrollNavs } from "@/src/libraries/navigation/ScrollNavs";
+import { ScrollNavs } from "@/src/libraries/components/navigation/ScrollNavs";
 import Link from "next/link";
 import React from "react";
 import { LANDING_CONTAINER_ID, LANDING_NAV } from "../constants";
