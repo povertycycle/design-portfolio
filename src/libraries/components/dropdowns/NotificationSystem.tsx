@@ -9,12 +9,12 @@ export const NotificationSystem: React.FC = () => {
         <div ref={ref} className="w-8 h-8 relative flex flex-col">
             <div
                 onClick={focus}
-                className="h-8 w-8 rounded-full cursor-pointer hover:bg-white/20 text-white flex items-center justify-center"
+                className="h-8 w-8 rounded-full cursor-pointer hover:bg-black-2.5 text-white flex items-center justify-center"
             >
                 <i className="ri-notification-3-line text-xl" />
             </div>
             <div className="absolute -top-0.5 -right-0.5 text-xs translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full flex items-center justify-center bg-red-error text-white">
-                +9
+                9+
             </div>
             {isFocused && <NotifTab />}
         </div>
@@ -29,13 +29,13 @@ const NotifTab: React.FC = () => {
     const select = (newTab: Notification) => () => setTab(newTab);
 
     return (
-        <div className="w-80 flex flex-col mt-4 bg-white/10 p-2 absolute top-full left-0 border-2 border-white/30 rounded-md">
-            <div className="flex w-full gap-2">
+        <div className="w-80 flex flex-col mt-4 bg-black-1 z-50 py-2 absolute top-full left-0 border-2 border-white/30 rounded-md">
+            <div className="flex w-full gap-2 px-2">
                 {(["news", "updates"] as Notification[]).map((option) => (
                     <div
                         key={option}
                         onClick={select(option)}
-                        className={`text-center w-full border-b cursor-pointer pb-1 ${
+                        className={`text-center w-full border-b cursor-pointer pb-2 pt-1 ${
                             tab === option
                                 ? "border-white text-white/90"
                                 : "border-white/60 hover:border-white/80 text-white/60 hover:text-white/80"
@@ -48,7 +48,7 @@ const NotifTab: React.FC = () => {
             <div>
                 {tab === "news" && <News />}
                 {tab === "updates" && <Updates />}
-                <div className="my-2 text-center text-white/80 text-sm">
+                <div className="mt-3 mb-2 text-center text-white/80 text-sm">
                     <span className="opacity-80 hover:opacity-100 cursor-pointer">
                         Read more
                     </span>
@@ -60,7 +60,7 @@ const NotifTab: React.FC = () => {
 
 const News: React.FC = () => {
     return (
-        <div className="w-full flex flex-col gap-1 p-1 mt-3 text-white/90 font-smooch text-xl font-medium">
+        <div className="w-full flex flex-col gap-1 mt-4 text-white/90 font-smooch text-xl font-medium">
             {[
                 {
                     time: "2026-05-04T12:27:18.996Z",
@@ -88,7 +88,7 @@ const News: React.FC = () => {
             ].map(({ avatar, time, message }, i) => (
                 <div
                     key={i}
-                    className="flex gap-3 hover:bg-white/10 cursor-pointer rounded-lg px-2 py-1"
+                    className="flex gap-3 hover:bg-white/10 cursor-pointer px-4 py-1"
                 >
                     {avatar && (
                         <img
@@ -111,7 +111,7 @@ const News: React.FC = () => {
 
 const Updates: React.FC = () => {
     return (
-        <div className="w-full flex flex-col gap-1 p-1 mt-3 text-white/90 font-smooch text-xl font-medium">
+        <div className="w-full flex flex-col gap-1 mt-4 text-white/90 font-smooch text-xl font-medium">
             {[
                 {
                     time: "2026-05-04T12:27:18.996Z",
@@ -128,7 +128,7 @@ const Updates: React.FC = () => {
             ].map(({ time, message }, i) => (
                 <div
                     key={i}
-                    className="flex gap-3 hover:bg-white/10 cursor-pointer rounded-lg px-2 py-1"
+                    className="flex gap-3 hover:bg-white/10 cursor-pointer px-4 py-1"
                 >
                     <div className="flex flex-col">
                         <span className="text-lg/6">{message}</span>

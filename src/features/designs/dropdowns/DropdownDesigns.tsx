@@ -1,4 +1,5 @@
 import { NotificationSystem } from "@/src/libraries/components/dropdowns/NotificationSystem";
+import { UserMenu } from "@/src/libraries/components/dropdowns/UserMenu";
 
 export const DropdownDesigns: React.FC = () => {
     return (
@@ -12,6 +13,14 @@ export const DropdownDesigns: React.FC = () => {
                     Dropdown, Notification
                 </span>
                 <NotificationSystem />
+            </div>
+            <div className="my-20 w-full h-px bg-white/35" />
+            <div className="w-lg flex flex-col mx-auto">
+                <span className="my-auto text-xl">User Menu</span>
+                <span className="opacity-75 italic text-base mt-1 mb-6 font-smooch">
+                    Dropdown, User, Menu, Settings, Avatar
+                </span>
+                <UserMenu />
             </div>
         </div>
     );

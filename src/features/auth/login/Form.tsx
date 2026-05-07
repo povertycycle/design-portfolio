@@ -1,6 +1,6 @@
 import { USER_DATA } from "@/src/constants/users";
 import { UserData } from "@/src/interfaces/user";
-import { Hyperlink } from "@/src/libraries/components/link/Hyperlink";
+import { Hyperlink } from "@/src/libraries/components/misc/Hyperlink";
 import useToast from "@/src/libraries/components/notification/Toast";
 import { ChangeEvent, useState } from "react";
 import { LoginPayload } from "./types";

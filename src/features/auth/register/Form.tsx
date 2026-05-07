@@ -1,4 +1,4 @@
-import { Hyperlink } from "@/src/libraries/components/link/Hyperlink";
+import { Hyperlink } from "@/src/libraries/components/misc/Hyperlink";
 import useToast from "@/src/libraries/components/notification/Toast";
 import { ChangeEvent, useState } from "react";
 import { RegisterPayload } from "./types";

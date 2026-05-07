@@ -1,11 +1,11 @@
 export const SearchContent: React.FC = () => {
     return (
-        <div className="w-full flex flex-col mt-2 bg-black-1 p-2 absolute top-full left-0 border-2 border-black-2.5 rounded-md">
+        <div className="w-full flex flex-col mt-2 bg-black-1 py-2 absolute top-full left-0 border-2 border-black-2.5 rounded-md">
             <div className="flex flex-col gap-2">
                 {SEARCH_CONTENTS.map(({ title, thumbnail }) => (
                     <div
                         key={title}
-                        className="text-white/90 py-1 pr-1 pl-2 cursor-pointer flex items-center gap-2 hover:bg-white/10 rounded-sm"
+                        className="text-white/90 py-1 pr-1 pl-2 cursor-pointer flex items-center gap-2 hover:bg-white/10"
                     >
                         <i className="ri-history-line text-lg/6" /> {title}
                         <div className="h-8 ml-auto rounded-sm overflow-hidden aspect-video flex items-center justify-center">

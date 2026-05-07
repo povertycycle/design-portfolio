@@ -1,4 +1,4 @@
-import { Hyperlink } from "@/src/libraries/components/link/Hyperlink";
+import { Hyperlink } from "@/src/libraries/components/misc/Hyperlink";
 import { SUPPORT_MAIL } from "../constants";
 import { INSTRAGRAM_URL } from "@/src/constants/profile";
 
