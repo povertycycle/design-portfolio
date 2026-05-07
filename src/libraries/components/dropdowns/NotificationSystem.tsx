@@ -29,7 +29,7 @@ const NotifTab: React.FC = () => {
     const select = (newTab: Notification) => () => setTab(newTab);
 
     return (
-        <div className="w-80 flex flex-col mt-4 bg-black-1 z-50 py-2 absolute top-full left-0 border-2 border-white/30 rounded-md">
+        <div className="w-80 flex flex-col mt-4 bg-black z-50 py-2 absolute top-full left-0 border-2 border-white/30 rounded-md">
             <div className="flex w-full gap-2 px-2">
                 {(["news", "updates"] as Notification[]).map((option) => (
                     <div

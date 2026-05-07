@@ -12,7 +12,7 @@ export const UserMenu: React.FC = () => {
                 className="rounded-full cursor-pointer"
             />
             {isFocused && (
-                <div className="text-white/90 w-80 flex flex-col mt-4 bg-white/10 py-2 absolute top-full left-0 border-2 border-white/30 rounded-md">
+                <div className="text-white/90 w-80 flex flex-col mt-4 bg-black py-2 absolute top-full left-0 border-2 border-white/30 rounded-md">
                     <div className="flex flex-col font-smooch text-xl/6 px-3 py-1">
                         <div className="flex gap-2 items-center">
                             <h1 className="font-medium">Some Random Name</h1>
