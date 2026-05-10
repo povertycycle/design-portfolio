@@ -45,7 +45,7 @@ export const InputDesigns: React.FC = () => {
             </div>
             <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
-                <span className="my-auto text-xl">Input Search</span>
+                <span className="my-auto text-xl">Search Input</span>
                 <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
                     Input, Search, Bar, Dropdown
                 </span>
@@ -53,7 +53,7 @@ export const InputDesigns: React.FC = () => {
             </div>
             <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
-                <span className="my-auto text-xl">Input Pin</span>
+                <span className="my-auto text-xl">Pin Input</span>
                 <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
                     Input, Pin, Digits, Numbers
                 </span>

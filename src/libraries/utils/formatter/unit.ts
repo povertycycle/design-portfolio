@@ -1,0 +1,12 @@
+export function formatCount(
+    count?: number | null,
+    unit?: string,
+    suffix: string = "s"
+): string {
+    return `${Intl.NumberFormat("en-US", {
+        notation: "compact",
+        maximumFractionDigits: 1,
+    }).format(count ?? 0)}${
+        unit ? ` ${unit}${(count ?? 0) > 1 ? suffix : ""}` : ""
+    }`;
+}

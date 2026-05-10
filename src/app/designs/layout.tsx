@@ -10,7 +10,7 @@ export default function DesignsLayout({
     return (
         <div className="w-screen h-screen bg-black flex font-fjalla">
             <Navigation />
-            <div className="w-full flex">{children}</div>
+            <div className="w-0 grow flex">{children}</div>
         </div>
     );
 }

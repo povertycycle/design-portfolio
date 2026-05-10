@@ -31,7 +31,8 @@ export const DesignMenu: React.FC = () => {
 const MENU = [
     { title: "Inputs", url: "inputs" },
     { title: "Dropdowns", url: "dropdowns" },
-    { title: "Navigaions", url: "navigations" },
-    { title: "Buttons", url: "buttons" },
     { title: "Cards", url: "cards" },
+    { title: "Navigations", url: "navigations" },
+    { title: "Lists", url: "lists" },
+    { title: "Buttons", url: "buttons" },
 ];
