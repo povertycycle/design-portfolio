@@ -27,7 +27,7 @@ export const LivestreamVideoCard: React.FC<LivestreamVideoCardProps> = ({
                 src={`/design-portfolio/img/${thumbnail}`}
                 className="h-32 aspect-video rounded-md relative z-1"
             />
-            <div className="w-full relative z-1 flex gap-2 mt-3">
+            <div className="w-full relative z-1 flex gap-2 mt-2 pb-0.5">
                 <img
                     alt=""
                     src={`/design-portfolio/img/${avatar}`}

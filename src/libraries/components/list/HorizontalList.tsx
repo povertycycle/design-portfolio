@@ -56,7 +56,7 @@ export const HorizontalList: React.FC = () => {
             </div>
             <div
                 ref={ref}
-                className=" overflow-x-scroll scroll-smooth hidden-scroll flex gap-6 mt-2 p-2"
+                className=" overflow-x-scroll scroll-smooth hidden-scroll flex gap-6 mt-2 p-3"
             >
                 {LIVESTREAMS.map((data) => (
                     <LivestreamVideoCard key={data.username} {...data} />

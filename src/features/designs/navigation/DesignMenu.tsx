@@ -32,7 +32,7 @@ const MENU = [
     { title: "Inputs", url: "inputs" },
     { title: "Dropdowns", url: "dropdowns" },
     { title: "Cards", url: "cards" },
-    { title: "Navigations", url: "navigations" },
     { title: "Lists", url: "lists" },
+    { title: "Navigations", url: "navigations" },
     { title: "Buttons", url: "buttons" },
 ];
