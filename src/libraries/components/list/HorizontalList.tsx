@@ -1,54 +1,23 @@
-import { useRef } from "react";
-import { formatCount } from "../../utils/formatter/unit";
+import { useSlide } from "../../hooks/useSlide";
 import { LivestreamVideoCard } from "../cards/LivestreamVideoCard";
 
 export const HorizontalList: React.FC = () => {
-    const leftButtonRef = useRef<HTMLDivElement>(null);
-    const rightButtonRef = useRef<HTMLDivElement>(null);
-    const ref = useRef<HTMLDivElement>(null);
-
-    const scrollLeft = () => {
-        if (
-            !ref.current ||
-            !window ||
-            !leftButtonRef.current ||
-            !rightButtonRef.current
-        )
-            return;
-
-        ref.current.scrollLeft -= window.innerWidth;
-        leftButtonRef.current.style.display = "none";
-        rightButtonRef.current.style.display = "flex";
-    };
-
-    const scrollRight = () => {
-        if (
-            !ref.current ||
-            !window ||
-            !leftButtonRef.current ||
-            !rightButtonRef.current
-        )
-            return;
-
-        ref.current.scrollLeft += window.innerWidth;
-        leftButtonRef.current.style.display = "flex";
-        rightButtonRef.current.style.display = "none";
-    };
+    const { ref, left, right } = useSlide();
 
     return (
         <div className="w-full flex flex-col">
             <div className="flex gap-4 px-2 items-center">
                 <h1>Live Now</h1>
                 <div
-                    ref={leftButtonRef}
-                    onClick={scrollLeft}
+                    ref={left.button}
+                    onClick={left.scroll}
                     className="h-8 w-8 hidden items-center justify-center rounded-full hover:bg-white/20 cursor-pointer"
                 >
                     <i className="ri-arrow-left-s-line" />
                 </div>
                 <div
-                    ref={rightButtonRef}
-                    onClick={scrollRight}
+                    ref={right.button}
+                    onClick={right.scroll}
                     className="h-8 w-8 flex items-center justify-center rounded-full hover:bg-white/20 cursor-pointer"
                 >
                     <i className="ri-arrow-right-s-line" />

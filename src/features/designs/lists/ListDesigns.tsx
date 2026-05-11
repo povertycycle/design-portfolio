@@ -1,3 +1,4 @@
+import { CategoryList } from "@/src/libraries/components/list/CategoryList";
 import { HorizontalList } from "@/src/libraries/components/list/HorizontalList";
 
 export const ListDesigns: React.FC = () => {
@@ -9,10 +10,23 @@ export const ListDesigns: React.FC = () => {
             <div className="flex flex-col w-full mx-auto px-4">
                 <div className="w-lg flex flex-col mx-auto">
                     <span className="text-xl">
+                        Horizontal List (Categories)
+                    </span>
+                    <span className="opacity-75 italic text-base mt-1 mb-2 font-smooch">
+                        List, Horizontal, Scrollbar-less, Categories, Arrows,
+                        Buttons
+                    </span>
+                </div>
+                <CategoryList />
+            </div>
+            <div className="my-24 w-full h-px bg-white/35" />
+            <div className="flex flex-col w-full mx-auto px-4">
+                <div className="w-lg flex flex-col mx-auto">
+                    <span className="text-xl">
                         Horizontal List (Livestreams)
                     </span>
                     <span className="opacity-75 italic text-base mt-1 mb-2 font-smooch">
-                        List, Horizontal, Scrollbar-less
+                        List, Horizontal, Scrollbar-less, Video
                     </span>
                 </div>
                 <HorizontalList />
