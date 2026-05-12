@@ -10,3 +10,14 @@ export function formatCount(
         unit ? ` ${unit}${(count ?? 0) > 1 ? suffix : ""}` : ""
     }`;
 }
+
+export function formatBytes(number?: number | null) {
+    return Intl.NumberFormat("en", {
+        notation: "compact",
+        style: "unit",
+        unit: "byte",
+        unitDisplay: "narrow",
+    })
+        .format(number ?? 0)
+        .replace("BB", "GB");
+}

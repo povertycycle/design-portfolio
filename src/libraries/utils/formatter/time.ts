@@ -1,3 +1,13 @@
+export type Unit = "DAYS" | "HOURS" | "MINUTES" | "SECONDS";
+type UnitValues = Partial<Record<Unit, number>>;
+const UNIT_VALUES: Record<Unit, number> = {
+    DAYS: 30,
+    HOURS: 24,
+    MINUTES: 60,
+    SECONDS: 60,
+};
+const _KEYS = Object.keys(UNIT_VALUES);
+
 export function timeAgo(d: string | Date): string {
     const date = d instanceof Date ? d : new Date(d);
     const formatter = new Intl.RelativeTimeFormat("en");
@@ -20,4 +30,48 @@ export function timeAgo(d: string | Date): string {
     }
 
     return "Some time ago";
+}
+
+function getTimeMultiplier(unit: Unit): number {
+    const index = _KEYS.indexOf(unit);
+    return _KEYS
+        .slice(index + 1, _KEYS.length)
+        .reduce((acc, curr) => acc * UNIT_VALUES[curr as Unit], 1);
+}
+
+function extractTime(
+    unitList: Unit[],
+    duration: number | null = 0
+): UnitValues {
+    const result: UnitValues = {};
+    if (!duration) {
+        return result;
+    }
+
+    const head = _KEYS.indexOf(unitList[0]) - 1;
+    let hasHeadValue = false;
+    if (head >= 0) {
+        const MAX = getTimeMultiplier(_KEYS[head] as Unit);
+        hasHeadValue = Math.floor(duration / MAX) >= 1;
+    }
+
+    unitList.forEach((unit, i) => {
+        const MAX = getTimeMultiplier(unit);
+        result[unit] =
+            i === 0
+                ? Math.floor(duration / MAX)
+                : Math.floor(duration / MAX) % UNIT_VALUES[unit];
+    });
+
+    return result;
+}
+
+export function toHHMMSS(duration: number | null = 0): string {
+    const data = extractTime(["HOURS", "MINUTES", "SECONDS"], duration);
+
+    const time = Object.values(data)
+        .filter((value) => value)
+        .map((value) => String(value).padStart(2, "0"));
+
+    return time.join(":");
 }

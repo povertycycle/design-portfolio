@@ -42,6 +42,7 @@ const LIVESTREAMS = [
         title: "those who bingus, bongus",
         avatar: "captain_domo-avatar.png",
         viewers: 9417,
+        isLive: true,
     },
     {
         thumbnail: "mitchriz.jpg",
@@ -49,6 +50,7 @@ const LIVESTREAMS = [
         title: "Reviewing practice matches | bingo vs aggy later",
         avatar: "mitchriz-avatar.png",
         viewers: 412,
+        isLive: true,
     },
     {
         thumbnail: "distortion2.jpg",
@@ -56,6 +58,7 @@ const LIVESTREAMS = [
         title: "let me out of this fucking hospital",
         avatar: "distortion2-avatar.png",
         viewers: 24765,
+        isLive: true,
     },
     {
         thumbnail: "lilaggy.jpg",
@@ -63,6 +66,7 @@ const LIVESTREAMS = [
         title: "indie horror games, bingus vs mitch after",
         avatar: "lilaggy-avatar.png",
         viewers: 54363,
+        isLive: true,
     },
     {
         thumbnail: "parkenharbor.jpg",
@@ -70,6 +74,7 @@ const LIVESTREAMS = [
         title: "Lies of P first playthrough",
         avatar: "parkenharbor-avatar.png",
         viewers: 24523,
+        isLive: true,
     },
     {
         thumbnail: "rainbow6.jpg",
@@ -77,6 +82,7 @@ const LIVESTREAMS = [
         title: "BLAST R6 SLC MAJOR | Phase 1 - Day 02",
         avatar: "rainbow6-avatar.png",
         viewers: 436376,
+        isLive: true,
     },
     {
         thumbnail: "the8bitdrummer.jpg",
@@ -84,6 +90,7 @@ const LIVESTREAMS = [
         title: "taking song requests and chilling",
         avatar: "the8bitdrummer-avatar.png",
         viewers: 432,
+        isLive: true,
     },
     {
         thumbnail: "corridorcrew.jpg",
@@ -91,5 +98,6 @@ const LIVESTREAMS = [
         title: "Unboxing our subscribers mystery gifts",
         avatar: "corridorcrew-avatar.png",
         viewers: 2108,
+        isLive: true,
     },
 ];

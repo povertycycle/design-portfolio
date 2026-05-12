@@ -1,26 +1,26 @@
-import { formatCount } from "../../utils/formatter/unit";
+import { toHHMMSS } from "../../utils/formatter/time";
 
-interface LivestreamVideoCardProps {
+interface VideoCardProps {
     avatar: string;
     username: string;
-    viewers: number;
+    duration: number;
     thumbnail: string;
     title: string;
     isLive?: boolean;
 }
 
-export const LivestreamVideoCard: React.FC<LivestreamVideoCardProps> = ({
+export const VideoCard: React.FC<VideoCardProps> = ({
     avatar,
     username,
-    viewers,
+    duration,
     thumbnail,
     title,
     isLive,
 }) => {
     return (
         <div className="group relative cursor-pointer flex flex-col shrink-0 w-57">
-            <div className="text-xs left-1 top-1 absolute px-1 py-0.5 bg-red-error rounded-xs z-2">
-                {formatCount(viewers)} <i className="ri-user-3-fill" />
+            <div className="text-xs left-1 top-1 absolute px-1 py-0.5 bg-black text-white/90 rounded-xs z-2">
+                {toHHMMSS(duration)}{" "}
             </div>
             <div className="w-full h-full transition-[color,scale] bg-white/0 group-hover:bg-black-2.5 group-hover:scale-110 absolute rounded-lg left-0 top-0" />
             <img
