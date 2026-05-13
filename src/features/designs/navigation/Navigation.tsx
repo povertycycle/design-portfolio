@@ -14,9 +14,9 @@ export const Navigation: React.FC = () => {
         >
             <div
                 onClick={toggle}
-                className="absolute right-0 top-4 translate-x-1/2 text-xl font-bold cursor-pointer flex items-center justify-center w-9 h-9 rounded-full bg-black border-2 border-white/35"
+                className="absolute right-0 top-5 translate-x-1/2 text-xl font-bold cursor-pointer flex items-center justify-center w-8 h-8 rounded-full bg-black border-2 border-white/35"
             >
-                <span className="hover:opacity-100 opacity-60 transition-opacity">
+                <span className="hover:opacity-100 opacity-60 transition-opacity text-base mr-0.5">
                     {!compressed ? (
                         <i className="ri-arrow-left-s-line" />
                     ) : (

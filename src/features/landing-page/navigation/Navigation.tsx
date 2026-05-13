@@ -18,10 +18,11 @@ export const Navigation: React.FC = () => {
                         className="flex flex-row-reverse items-center gap-4 -mr-1.25 transition-[transform]"
                     >
                         <div className="w-3 h-3 rounded-full bg-gray-300" />
-                        <Link href={`#${anchorId}`}>
-                            <span className="transition-opacity whitespace-nowrap hover:opacity-95 opacity-60">
-                                {text}
-                            </span>
+                        <Link
+                            href={`#${anchorId}`}
+                            className="transition-opacity whitespace-nowrap hover:opacity-95 opacity-60"
+                        >
+                            {text}
                         </Link>
                     </div>
                 ))}
@@ -42,7 +43,7 @@ export const Navigation: React.FC = () => {
                 <Link href="/auth/login">
                     <TopMenu title="Login" />
                 </Link>
-                <Link href={"/auth/register"}>
+                <Link href={"/auth/login?register=true"}>
                     <TopMenu title="Join Us" />
                 </Link>
             </div>

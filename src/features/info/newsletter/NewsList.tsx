@@ -15,10 +15,10 @@ export const NewsList: React.FC<{ similarStories: SimilarStories[] }> = ({
                         src={`/design-portfolio/img/${coverArt}`}
                         className="w-full absolute"
                     />
-                    <div className="text-xl bg-black/50 px-5 py-4 w-full h-full flex text-white relative group-hover/card:bg-black/35">
+                    <div className="text-xl bg-black/65 transition-colors px-5 py-4 w-full h-full flex text-white relative group-hover/card:bg-black/35">
                         <div className="flex flex-col opacity-75 group-odd:ml-auto group-odd:items-end mt-auto">
                             <span>{header}</span>
-                            <span className="font-smooch text-xl font-medium">
+                            <span className="font-barlow text-sm font-medium">
                                 {new Date(postedAt).toLocaleDateString(
                                     "en-US",
                                     {

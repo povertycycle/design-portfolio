@@ -5,7 +5,7 @@ export const VideoPanel: React.FC = () => {
                 <h1 className="text-xl sm:text-8xl font-bold">
                     William Sentosatio
                 </h1>
-                <h2 className="text-sm italic sm:text-2xl mt-4 sm:mt-8 font-smooch font-medium text-center">
+                <h2 className="text-sm italic sm:text-xl mt-4 sm:mt-8 font-barlow font-medium text-center">
                     Collections of visual design for web components, UI
                     libraries, and prototypes.
                 </h2>

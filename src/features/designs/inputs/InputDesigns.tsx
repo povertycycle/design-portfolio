@@ -13,7 +13,7 @@ export const InputDesigns: React.FC = () => {
             </h1>
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Basic Input</span>
-                <span className="opacity-75 italic text-base mt-1 mb-2 font-smooch">
+                <span className="opacity-75 italic text-sm mt-1 mb-2 font-barlow">
                     Input, Fields, Email, Username, Address, Text
                 </span>
                 <UnderlinedInput placeholder="Fullname" />
@@ -21,7 +21,7 @@ export const InputDesigns: React.FC = () => {
             <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Password Input</span>
-                <span className="opacity-75 italic text-base mt-1 mb-2 font-smooch">
+                <span className="opacity-75 italic text-sm mt-1 mb-2 font-barlow">
                     Input, Password
                 </span>
                 <PasswordInput />
@@ -29,7 +29,7 @@ export const InputDesigns: React.FC = () => {
             <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Labelled Input</span>
-                <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
+                <span className="opacity-75 italic text-sm mt-1 mb-8 font-barlow">
                     Input, Fields, Email, Username, Address, Text, Label,
                     Floating, Slide, Up
                 </span>
@@ -38,7 +38,7 @@ export const InputDesigns: React.FC = () => {
             <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Labelled Password Input</span>
-                <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
+                <span className="opacity-75 italic text-sm mt-1 mb-8 font-barlow">
                     Input, Password, Label, Floating, Slide, Up
                 </span>
                 <LabelPasswordInput />
@@ -46,7 +46,7 @@ export const InputDesigns: React.FC = () => {
             <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Search Input</span>
-                <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
+                <span className="opacity-75 italic text-sm mt-1 mb-8 font-barlow">
                     Input, Search, Bar, Dropdown
                 </span>
                 <SearchInput placeholder="Search name" />
@@ -54,7 +54,7 @@ export const InputDesigns: React.FC = () => {
             <div className="my-24 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Pin Input</span>
-                <span className="opacity-75 italic text-base mt-1 mb-8 font-smooch">
+                <span className="opacity-75 italic text-sm mt-1 mb-8 font-barlow">
                     Input, Pin, Digits, Numbers
                 </span>
                 <PinInput />

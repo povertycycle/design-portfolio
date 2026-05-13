@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ToastData, ToastType } from "./types";
 import styles from "./styles.module.css";
+import { createPortal } from "react-dom";
 
 const useToast = (duration?: number) => {
     const [content, setContent] = useState<ToastData | null>(null);
@@ -34,15 +35,15 @@ const Toast: React.FC<ToastProps> = ({ data, duration, remove }) => {
             case "normal":
                 return {
                     remixicon: "ri-checkbox-circle-fill",
-                    color: "text-green-success",
+                    color: "bg-green-success",
                 };
             case "error":
-                return { remixicon: "ri-alert-fill", color: "text-red-error" };
+                return { remixicon: "ri-alert-fill", color: "bg-red-error" };
             case "info":
             default:
                 return {
                     remixicon: "ri-information-fill",
-                    color: "text-black",
+                    color: "bg-black",
                 };
         }
     })();
@@ -61,22 +62,25 @@ const Toast: React.FC<ToastProps> = ({ data, duration, remove }) => {
         };
     }, []);
 
-    return (
+    return createPortal(
         <div
             ref={ref}
-            className={`${styles.toast} text-xl font-smooch translate-y-4 -translate-x-1/2 overflow-hidden transition-transform fixed top-0 left-1/2 max-w-120 bg-white text-dark-blue rounded-md px-2 z-[1000]`}
+            className={`${styles.toast} text-lg font-barlow overflow-hidden translate-y-4 -translate-x-1/2 transition-transform fixed top-0 left-1/2 max-w-120 text-white rounded-md px-2 z-1000`}
         >
             <div
-                className={`max-w-mobile flex items-center justify-center gap-2 px-4 py-2 w-fit font-bold mx-auto ${color} rounded-md`}
+                className={`max-w-mobile flex items-center justify-center gap-2 px-4 py-1 w-fit mx-auto ${color} rounded-md`}
             >
                 <i className={`${remixicon} text-xl/8`} />
-                <span className="ml-2">{data.message}</span>
-                <div className="bg-white/25 h-7 w-mini mx-2" />
-                <button className="cursor-pointer" onClick={remove}>
-                    <i className="ri-close-line text-lg/6" />
+                <span className="mx-4 text-sm/5">{data.message}</span>
+                <button
+                    className="cursor-pointer hover:text-white/80"
+                    onClick={remove}
+                >
+                    <i className="ri-close-line text-lg/8" />
                 </button>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 };
 

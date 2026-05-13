@@ -12,7 +12,7 @@ export const ListDesigns: React.FC = () => {
                     <span className="text-xl">
                         Horizontal List (Categories)
                     </span>
-                    <span className="opacity-75 italic text-base mt-1 mb-2 font-smooch">
+                    <span className="opacity-75 italic text-sm mt-1 mb-2 font-barlow">
                         List, Horizontal, Scrollbar-less, Categories, Arrows,
                         Buttons
                     </span>
@@ -25,12 +25,12 @@ export const ListDesigns: React.FC = () => {
                     <span className="text-xl">
                         Horizontal List (Livestreams)
                     </span>
-                    <span className="opacity-75 italic text-base mt-1 mb-2 font-smooch">
+                    <span className="opacity-75 italic text-sm mt-1 mb-2 font-barlow">
                         List, Horizontal, Scrollbar-less, Video
                     </span>
                 </div>
                 <HorizontalList />
-                <span className="italic font-smooch opacity-75 mt-2">
+                <span className="italic font-barlow text-xs opacity-75 mt-2">
                     *Personas and contents above belong to the respective
                     owners/creators/streamers
                 </span>

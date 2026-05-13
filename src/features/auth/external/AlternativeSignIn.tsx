@@ -6,9 +6,10 @@ export const AlternativeSignIn: React.FC = () => {
             {EXTERNAL_OAUTH.map((oauth) => (
                 <div
                     key={oauth}
-                    className="bg-white hover:bg-white/95 w-9 h-9 rounded-sm flex items-center justify-center cursor-pointer"
+                    data-target={oauth}
+                    className="data-[oauth=twitter-x]:text-sm text-base w-8 h-8 text-white/75 bg-white/5 border-white/15 border-2 hover:bg-white/10 transition-colors rounded-sm flex items-center justify-center cursor-pointer"
                 >
-                    <i className={`ri-${oauth}-fill`} />
+                    <i className={`ri-${oauth}-line`} />
                 </div>
             ))}
         </div>

@@ -1,5 +1,5 @@
-import { USER_DATA } from "@/src/constants/users";
 import { UserData } from "@/src/interfaces/user";
+import { USER_DATA } from "@/src/constants/users";
 import { Hyperlink } from "@/src/libraries/components/misc/Hyperlink";
 import useToast from "@/src/libraries/components/notification/Toast";
 import { ChangeEvent, useState } from "react";
@@ -8,14 +8,26 @@ import { Spinner } from "@/src/libraries/components/loading/Spinner";
 import { AlternativeSignIn } from "../external/AlternativeSignIn";
 import { PasswordInput } from "@/src/libraries/components/inputs/PasswordInput";
 
+export const LoginForm: React.FC = () => {
+    const onSuccess = (res: UserData) => {
+        // Redirect to dashboard
+    };
+
+    return (
+        <div className={"w-160 absolute h-full z-1 flex"}>
+            <Form onSuccess={onSuccess} />
+            <img
+                src="/design-portfolio/img/pexels-wal_-172619-2156618639-36077711.jpg"
+                className="absolute h-full w-full object-cover top-0 left-0"
+            />
+        </div>
+    );
+};
+
 interface LoginFormProps {
     onSuccess?: (res: UserData) => void;
 }
 
-/**
- * [v2.0] - Login form usable anywhere in the application with toast message and callbacks.
- * @param callbacks Callbacks on success or failure.
- */
 export const Form: React.FC<LoginFormProps> = ({ onSuccess }) => {
     const { toast, Toast } = useToast();
     const success = (res: UserData) => {
@@ -24,20 +36,20 @@ export const Form: React.FC<LoginFormProps> = ({ onSuccess }) => {
     };
 
     return (
-        <div className="max-w-xl text-white flex flex-col my-auto items-end ml-auto w-full relative z-1">
+        <div className="border-l-2 border-white/15 w-full relative z-1 text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
             {Toast}
-            <span className="font-bold text-2xl/8">Hi, Welcome Back!</span>
-            <div className="font-medium text-lg font-smooch">
-                We&apos;ve been waiting for <b>your return</b>!
+            <span className="text-2xl">Hi, Welcome Back!</span>
+            <div className="flex gap-1 items-center font-barlow text-base">
+                We&apos;ve been waiting for your return!
             </div>
-            <div className="flex flex-col w-full h-full mt-12 max-w-xl">
+            <div className="w-full flex flex-col mt-12">
                 <Fields onSuccess={success} />
-                <div className="flex gap-3 justify-center mt-12 leading-7">
-                    <span className="font-medium font-smooch text-xl tracking-wide">
-                        Don&apos;t have an account?
-                    </span>
-                    <span className="text-gold">
-                        <Hyperlink url="/auth/register">Sign-up</Hyperlink>
+                <div className="flex gap-1 justify-center mt-12 items-center font-medium font-barlow text-base">
+                    Don&apos;t have an account?
+                    <span className="text-gold font-fjalla text-sm/4 mt-1">
+                        <Hyperlink url="/auth/login?register=true">
+                            Sign-up
+                        </Hyperlink>
                     </span>
                 </div>
             </div>
@@ -45,9 +57,6 @@ export const Form: React.FC<LoginFormProps> = ({ onSuccess }) => {
     );
 };
 
-/**
- * [v2.0] - Login form with single state management.
- */
 const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
     const [formData, setFormData] = useState<Partial<LoginPayload>>({});
     const [loading, setLoading] = useState<boolean>(false);
@@ -70,10 +79,8 @@ const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
 
     return (
         <form
-            className="w-full flex flex-col gap-8 items-end font-smooch text-xl tracking-wide font-medium"
-            onSubmit={(e) => {
-                e.preventDefault();
-            }}
+            className="w-full flex flex-col gap-6 items-end"
+            onSubmit={(e) => e.preventDefault()}
         >
             <input
                 className="auth__input--default"
@@ -92,7 +99,7 @@ const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
                         loading
                             ? ""
                             : "not-disabled:cursor-pointer not-disabled:hover:bg-white/95"
-                    } bg-white text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-bold py-1 flex items-center justify-center`}
+                    } bg-white text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
                     onClick={validatePayload}
                 >
                     {loading ? <Spinner /> : "Login"}
@@ -104,7 +111,7 @@ const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
 
 const ForgotPassword: React.FC = () => {
     return (
-        <div className="w-fit mr-1 text-white/60 hover:text-white text-base italic text-end cursor-pointer transition-colors">
+        <div className="w-fit mr-1 font-barlow text-white/45 hover:text-white/75 text-base italic text-end cursor-pointer transition-colors">
             Forgot Password?
         </div>
     );

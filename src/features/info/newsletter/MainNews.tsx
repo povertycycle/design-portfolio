@@ -13,23 +13,23 @@ export const MainNews: React.FC<NewsData> = ({
                 src={`/design-portfolio/img/${coverArt}`}
                 className="absolute w-full"
             />
-            <div className="absolute top-0 group-even::left-0 group-odd:right-0 mx-8 mt-8 text-xl opacity-75 tracking-wide z-1">
+            <div className="absolute top-0 group-even::left-0 group-odd:right-0 mx-8 mt-8 text-base font-barlow opacity-75 tracking-wide z-1">
                 {new Date(postedAt).toLocaleDateString("en-US", {
                     day: "numeric",
                     month: "long",
                     year: "numeric",
                 })}
             </div>
-            <div className="flex flex-col group-odd:items-end justify-end h-full gap-8 py-6 px-8 w-full relative bg-black/55">
+            <div className="flex flex-col group-odd:items-end justify-end h-full gap-8 py-6 px-8 w-full relative bg-black/75">
                 <h1 className="text-8xl group-even:ml-auto group-odd:mr-auto mb-8 px-4 opacity-50">
                     {header}
                 </h1>
-                <span className="font-smooch text-2xl group-odd:text-end max-w-160 opacity-85 font-medium tracking-wide">
+                <span className="font-barlow text-xl group-odd:text-end max-w-160 opacity-75">
                     {summary}
                 </span>
-                <div className="flex items-center text-xl cursor-pointer group-line opacity-75 hover:opacity-100 w-fit">
-                    <span>Read more</span>{" "}
-                    <i className={`ri-arrow-right-s-line text-3xl`} />
+                <div className="flex items-center text-lg font-barlow cursor-pointer group-line opacity-75 hover:opacity-100 w-fit">
+                    <span className="pb-1">Read more</span>{" "}
+                    <i className={`ri-arrow-right-s-line text-xl`} />
                 </div>
             </div>
         </div>

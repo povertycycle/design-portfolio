@@ -63,12 +63,12 @@ export const ScrollNavs: React.FC<ScrollNavsProps> = ({
             >
                 {children}
             </div>
-            <CompanySocials />
+            <SocialMedia />
         </div>
     );
 };
 
-const CompanySocials: React.FC = () => {
+const SocialMedia: React.FC = () => {
     return (
         <div className="flex flex-col items-end">
             <div className="h-16 w-0.5 bg-gray-300" />
@@ -77,9 +77,9 @@ const CompanySocials: React.FC = () => {
                     <Link
                         href={url}
                         target="_blank"
-                        className="border-2 shrink-0 border-white group mr-px rounded-full flex items-center justify-center w-7 h-7 text-white translate-x-1/2"
+                        className="group hover:scale-120 transition-transform border-2 shrink-0 border-white group mr-px rounded-full flex items-center justify-center w-7 h-7 text-white translate-x-1/2"
                     >
-                        <span className="hover:opacity-100 opacity-60 transition-opacity text-sm">
+                        <span className="group-hover:opacity-100 opacity-60 transition-opacity text-sm">
                             <i className={remixicon} />
                         </span>
                     </Link>

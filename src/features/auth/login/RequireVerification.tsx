@@ -1,92 +1,57 @@
-import React, { useEffect, useState } from "react";
+import useToast from "@/src/libraries/components/notification/Toast";
+import React from "react";
 
-/**
- * [v2.0] - Successful registration confirmation.
- */
 export const RequireVerification: React.FC = () => {
     return (
-        <div className="flex flex-col z-1 relative text-base/6 text-white max-w-xl my-auto">
-            <h1 className="text-3xl font-bold tracking-wide">Welcome!</h1>
-            <h2 className="mt-2 font-medium text-xl tracking-wide text-gray-300 font-smooch">
-                You&apos;re just <b>a step</b> away from becoming a part of our{" "}
-                <b>family</b>!
-            </h2>
-            <div className="mt-16 font-smooch text-xl tracking-wide">
-                <p>
-                    But, before you can enjoy the <b>full access </b>to the
-                    platform, we&apos;ll need you to <b>validate </b>your
-                    account through a <b>confirmation link </b>that we&apos;ve
-                    sent to your email.
+        <div className="w-160 absolute h-full z-1 flex">
+            <div className="w-full relative z-1 font-barlow text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
+                <h1 className="text-2xl font-fjalla">Welcome!</h1>
+                <h2 className="mt-2 text-base text-white/75">
+                    You&apos;re just a step away from becoming a part of our
+                    family!
+                </h2>
+                <div className="mt-16 text-base">
+                    <p>
+                        But, before you can enjoy the{" "}
+                        <b className="text-gold">full access </b>to the
+                        platform, we&apos;ll need you to{" "}
+                        <b className="text-gold">validate </b>your account
+                        through a{" "}
+                        <b className="text-gold">confirmation link </b>that
+                        we&apos;ve sent to your email.
+                    </p>
+                </div>
+                <p className="mt-4">
+                    We can&apos;t wait for you to have fun with us.
                 </p>
+                <p className="flex flex-col text-base mt-16 text-white/75">
+                    <span>Sincerely,</span>
+                    <span>Your friend</span>
+                </p>
+                <span className="mb-5 text-center italic text-base text-white/75 mt-12">
+                    Didn&apos;t receive any e-mail?
+                </span>
+                <RequestNewMail />
             </div>
-            <p className=" font-smooch text-xl tracking-wide mt-4">
-                We can&apos;t wait for you to have <b>fun</b> with us.
-            </p>
-            <p className="flex flex-col font-smooch text-xl tracking-wide mt-4">
-                <span>Sincerely,</span>
-                <b>Your friend</b>
-            </p>
-            <span className="mb-5 text-center italic text-lg font-smooch mt-12">
-                Didn&apos;t receive any e-mail?
-            </span>
-            <RequestNewMail />
         </div>
     );
 };
 
-/**
- * [v2.0] - Request resend email.
- */
 const RequestNewMail: React.FC = () => {
-    // const { toast, Toast } = useToast();
-    const [cooldown, setCooldown] = useState<boolean>(false);
+    const { toast, Toast } = useToast();
 
     const resend = () => {
-        // toast("Verification re-sent");
-        setCooldown(true);
-    };
-
-    const resetButton = () => {
-        setCooldown(false);
+        toast("Verification re-sent");
     };
 
     return (
         <>
-            {/* {Toast} */}
-            <div className="mx-auto text-xl" onClick={resend}>
-                {!cooldown ? (
-                    <span className="cursor-pointer hover:opacity-100 opacity-65 transition-opacity">
-                        Resend Verification
-                    </span>
-                ) : (
-                    <Cooldown resetButton={resetButton} />
-                )}
+            {Toast}
+            <div className="mx-auto text-base font-fjalla" onClick={resend}>
+                <span className="cursor-pointer hover:opacity-100 opacity-65 transition-opacity">
+                    Resend Verification
+                </span>
             </div>
         </>
     );
-};
-
-/**
- * [v2.0] - Cooldown indicator.
- */
-const Cooldown: React.FC<{ resetButton: () => void }> = ({ resetButton }) => {
-    const [seconds, setSeconds] = useState<number>(60);
-
-    useEffect(() => {
-        const timeoutId = window.setInterval(() => {
-            setSeconds((prev) => {
-                const t = prev - 1;
-                if (t <= 0) {
-                    window.clearInterval(timeoutId);
-                    resetButton();
-                }
-                return t;
-            });
-        }, 1000);
-        return () => {
-            window.clearInterval(timeoutId);
-        };
-    }, []);
-
-    return <span>{seconds}</span>;
 };

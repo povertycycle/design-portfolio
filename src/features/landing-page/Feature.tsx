@@ -26,7 +26,7 @@ export const Feature: React.FC<FeatureProps> = ({ num, image }) => {
                             >
                                 Feature Title
                             </h1>
-                            <h2 className="text-xl group-odd:text-end italic mt-4 font-smooch text-gray-300 font-medium">
+                            <h2 className="text-xl group-odd:text-end italic mt-4 font-barlow text-gray-300 font-medium">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Sed posuere mattis mi. Etiam in
                                 turpis odio. Nulla facilisi. Nunc eget ante id

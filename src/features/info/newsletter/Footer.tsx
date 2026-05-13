@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
                 <span className="text-2xl opacity-85">
                     Subscribe to our newsletter
                 </span>
-                <span className="font-smooch opacity-85 text-xl font-medium">
+                <span className="font-barlow opacity-85 text-base font-medium">
                     Read updates and stories from all over the world
                 </span>
                 <input
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                     autoComplete="email"
                 />
                 <button
-                    className={`bg-white/90 hover:brightness-95 mt-8 ml-auto text-black cursor-pointer rounded-sm px-4 w-32 group h-9 py-1 flex items-center justify-center`}
+                    className={`bg-white/90 hover:brightness-95 mt-8 ml-auto text-black rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
                 >
                     Subscribe
                 </button>

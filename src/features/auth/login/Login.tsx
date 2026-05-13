@@ -1,27 +1,36 @@
-import { UserData } from "@/src/interfaces/user";
-import { Form } from "./Form";
+import { useSearchParams } from "next/navigation";
+import { LoginForm } from "./LoginForm";
+import { RegisterForm } from "./RegisterForm";
 
 export const Login: React.FC = () => {
-    const onSuccess = (res: UserData) => {
-        // Redirect to dashboard
-    };
+    const params = useSearchParams();
+    const isRegister = params.get("register") === "true";
 
     return (
-        <div className={"w-full h-full relative"}>
-            <div className="w-full h-full relative z-1 grid grid-cols-2 px-6 gap-16 bg-black/75">
-                <Form onSuccess={onSuccess} />
-                <div className="w-120 h-160 my-auto mr-auto rounded-2xl overflow-hidden relative z-1">
-                    <img
-                        src="/design-portfolio/img/pexels-thienleduyphoto-36809138.jpg"
-                        alt="pexels-thienleduyphoto-36809138"
-                        className=""
-                    />
+        <div className="w-full h-full flex">
+            {
+                <div
+                    data-register={isRegister}
+                    className={`transition-[width] data-[register=true]:w-160 w-0 duration-500 h-full relative flex justify-end`}
+                >
+                    <RegisterForm />
                 </div>
+            }
+            <div className="w-0 grow h-full relative z-1">
+                <img
+                    src="/design-portfolio/img/pexels-pexels-user-2161008279-37149787.jpg"
+                    alt="pexels-pexels-user-2161008279-37149787"
+                    className="w-full h-full object-cover relative z-0 brightness-85"
+                />
             </div>
-            <img
-                src="/design-portfolio/img/pexels-wal_-172619-2156618639-36077711.jpg"
-                className="absolute h-full w-full object-cover top-0 left-0 blur-sm"
-            />
+            {
+                <div
+                    data-register={isRegister}
+                    className={`transition-[width] data-[register=true]:w-0 w-160 duration-500 h-full relative`}
+                >
+                    <LoginForm />
+                </div>
+            }
         </div>
     );
 };

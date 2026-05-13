@@ -1,27 +1,29 @@
 export const FAQList: React.FC = () => {
     return (
         <div className="flex flex-col h-full border-r border-white/75 p-8 w-full text-white">
-            <div className="relative">
+            <div className="relative h-8">
                 <input
                     className="faqs__input--search peer"
                     placeholder="Search a question"
                 />
-                <i className="ri-search-line absolute text-white/60 left-4 top-1.5 peer-focus:text-white" />
+                <div className="absolute left-1 top-0 h-full aspect-square flex items-center justify-center">
+                    <i className="ri-search-line text-white/60 peer-focus:text-white" />
+                </div>
             </div>
             <div className="flex flex-col gap-8 mt-12 h-0 overflow-auto sleek-scroll pr-2 grow">
                 {DUMMY_QUESIONS.map(({ title, answer }) => (
                     <div key={title} className="flex flex-col gap-1">
                         <div
                             tabIndex={0}
-                            className="peer cursor-pointer text-2xl flex justify-between group"
+                            className="peer cursor-pointer text-xl flex justify-between group"
                         >
                             <span>{title}</span>
                             <span className="group-hover:opacity-100 opacity-75 transition-opacity">
                                 <i className="ri-add-line" />
                             </span>
                         </div>
-                        <div className="w-full h-px bg-white/65" />
-                        <span className="font-medium tracking-wide max-h-0 overflow-hidden peer-focus:max-h-36 transition-[max-height] text-xl font-smooch">
+                        <div className="w-full h-0.5 bg-white/65" />
+                        <span className="max-h-0 overflow-hidden peer-focus:max-h-36 transition-[max-height] text-base font-barlow">
                             {answer}
                         </span>
                     </div>

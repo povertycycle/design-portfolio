@@ -17,7 +17,7 @@ export const Questions: React.FC = () => {
                         <h1 className="text-4xl font-bold tracking-wide">
                             Questions?
                         </h1>
-                        <h2 className="text-2xl mt-4 font-smooch font-medium text-white/85">
+                        <h2 className="text-xl mt-2 font-barlow text-white/85">
                             Shoot us a message
                         </h2>
                     </div>

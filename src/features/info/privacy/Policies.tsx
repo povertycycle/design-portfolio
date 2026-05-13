@@ -3,7 +3,7 @@ export const PRIVACY_SECTIONS = [
         text: "Fusce et Turpis",
         anchorId: "policy-section-1",
         child: (
-            <div className="text-xl font-smooch font-medium flex flex-col opacity-85">
+            <div className="text-lg font-barlow font-medium flex flex-col opacity-85">
                 <span>
                     Vivamus eu ullamcorper dolor. Quisque dapibus rhoncus risus
                     nec ornare. Nulla ut augue iaculis, facilisis arcu a, porta
@@ -35,7 +35,7 @@ export const PRIVACY_SECTIONS = [
         text: "Mattis est Lobortis",
         anchorId: "policy-section-2",
         child: (
-            <div className="text-xl font-smooch font-medium flex flex-col opacity-85">
+            <div className="text-lg font-barlow font-medium flex flex-col opacity-85">
                 <span>
                     In dignissim nec dolor molestie sollicitudin. Sed mauris
                     dui, sagittis at velit at, lobortis iaculis elit. Quisque
@@ -57,7 +57,7 @@ export const PRIVACY_SECTIONS = [
         text: "Rhoncus Non",
         anchorId: "policy-section-3",
         child: (
-            <div className="text-xl font-smooch font-medium flex flex-col opacity-85">
+            <div className="text-lg font-barlow font-medium flex flex-col opacity-85">
                 <span>
                     Curabitur volutpat ligula et velit sollicitudin, a interdum
                     nisl porta. Suspendisse at feugiat quam, eu luctus velit.
@@ -98,7 +98,7 @@ export const PRIVACY_SECTIONS = [
         text: "Orci Varius",
         anchorId: "policy-section-4",
         child: (
-            <div className="text-xl font-smooch font-medium flex flex-col opacity-85">
+            <div className="text-lg font-barlow font-medium flex flex-col opacity-85">
                 <span>
                     Vivamus quis vulputate felis. Mauris euismod magna quam, sit
                     amet blandit leo rutrum vel. Sed sed euismod neque.
@@ -144,7 +144,7 @@ export const PRIVACY_SECTIONS = [
         text: "Natoque",
         anchorId: "policy-section-5",
         child: (
-            <div className="text-xl font-smooch font-medium flex flex-col opacity-85">
+            <div className="text-lg font-barlow font-medium flex flex-col opacity-85">
                 <span>
                     Quisque sagittis magna sed velit bibendum ullamcorper.
                     Curabitur lectus mauris, viverra eget ornare ut, ultrices
@@ -164,7 +164,7 @@ export const PRIVACY_SECTIONS = [
         text: "Penatibus et Magnis",
         anchorId: "policy-section-6",
         child: (
-            <div className="text-xl font-smooch font-medium flex flex-col opacity-85">
+            <div className="text-lg font-barlow font-medium flex flex-col opacity-85">
                 <span>
                     Maecenas consectetur arcu ut dolor suscipit, non semper ex
                     mollis. Ut ligula ligula, ultricies vitae mattis ut, lacinia
@@ -186,7 +186,7 @@ export const PRIVACY_SECTIONS = [
         text: "Dis Parturient Montes",
         anchorId: "policy-section-7",
         child: (
-            <div className="text-xl font-smooch font-medium flex flex-col opacity-85">
+            <div className="text-lg font-barlow font-medium flex flex-col opacity-85">
                 <span>
                     Aenean rutrum, orci nec dictum lacinia, nisl arcu finibus
                     quam, eget vestibulum velit augue in eros. Pellentesque

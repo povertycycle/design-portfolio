@@ -8,7 +8,7 @@ export const LabelInput: React.FC<LabelInputProps> = ({ placeholder }) => {
     const id = useId();
 
     return (
-        <div className="relative w-full max-w-lg">
+        <div className="relative w-full max-w-lg font-barlow">
             <input
                 id={id}
                 placeholder=""

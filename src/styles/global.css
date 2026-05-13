@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Barlow+Semi+Condensed&family=Smooch+Sans:wght@100..900&display=swap');
 @import 'tailwindcss';
 
 @theme {
     --font-fjalla: 'Fjalla One', sans-serif;
     --font-smooch: 'Smooch Sans', sans-serif;
+	--font-barlow: 'Barlow Semi Condensed', sans-serif;
 
     --color-black-1: #1a1a1a;
+	--color-black-1.5: #262626;
 	--color-black-2.5: #404040;
-	--color-green-success: #14a620;
+	--color-green-success: #0e8518;
 	--color-red-error: #d60b0b;
 	--color-gold: #EFBF04;
 }
@@ -19,11 +21,11 @@
     }
 
 	.auth__input--default {
-        @apply placeholder:text-white/60 placeholder:text-end focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-b-white/80 focus:border-b-white transition-colors border-b-white/60 border-b-2 w-full h-8 focus:outline-none px-2;
+        @apply placeholder:text-white/60 font-barlow text-base h-8 placeholder:text-end focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-b-white/80 focus:border-b-white transition-colors border-b-white/60 border-b-2 w-full focus:outline-none px-2;
     }
 
 	.faqs__input--search {
-        @apply rounded-full h-9 placeholder:text-white/60 pl-10 focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-white/80 focus:border-white transition-colors border-white/60 border-2 w-full focus:outline-none px-2;
+        @apply rounded-full h-8 text-sm font-fjalla placeholder:text-white/60 pl-9 focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-white/80 focus:border-white transition-colors border-white/60 border-2 w-full focus:outline-none px-2;
     }
     .sleek-scroll {
         @media screen and (min-width: 640px) {

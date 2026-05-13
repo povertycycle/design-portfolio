@@ -28,7 +28,7 @@ export const PrivacyPolicy: React.FC = () => {
                                     .getElementById(anchorId)
                                     ?.scrollIntoView()
                             }
-                            className="cursor-pointer hover:text-white transition-opacity opacity-60 whitespace-nowrap"
+                            className="cursor-pointer hover:opacity-80 text-white transition-opacity opacity-60 whitespace-nowrap"
                         >
                             {text}
                         </span>
@@ -39,7 +39,7 @@ export const PrivacyPolicy: React.FC = () => {
                 <h1 className="text-3xl tracking-wide font-bold">
                     Privacy Policy
                 </h1>
-                <h2 className="mt-6 font-smooch font-bold tracking-wide text-2xl opacity-75">
+                <h2 className="mt-6 font-barlow text-xl opacity-75">
                     In faucibus, urna non dictum pulvinar, diam ante ornare
                     augue, sit amet egestas eros tellus at nisi. Nunc
                     consectetur maximus ante, ac gravida neque vulputate sit
@@ -52,10 +52,10 @@ export const PrivacyPolicy: React.FC = () => {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-xl">Maecenas iaculis</span>
-                        <span className="mt-auto opacity-95 font-medium tracking-wide font-smooch text-xl">
+                        <span className="mt-auto opacity-95 font-medium tracking-wide font-barlow text-lg">
                             Nec luctus urna sodales vel?
                         </span>
-                        <span className="mt-2 border-b border-white/85 cursor-pointer font-smooch opacity-90 font-medium text-xl">
+                        <span className="mt-2 border-b border-white/85 cursor-pointer font-barlow opacity-90 font-medium text-lg">
                             Etiam non orci id eros ullamcorper vestibulum at non
                             velit{" "}
                             <i className="ri-external-link-line text-xl" />
@@ -65,10 +65,10 @@ export const PrivacyPolicy: React.FC = () => {
                 <div className="my-16 w-full h-px bg-white/50" />
                 <div className="flex flex-col gap-4">
                     <span className="text-lg">Updated at December 9, 1990</span>
-                    <span className="border-b border-white/85 cursor-pointer font-smooch opacity-90 font-medium text-xl w-fit">
+                    <span className="border-b border-white/85 cursor-pointer font-barlow opacity-90 font-medium text-lg w-fit">
                         Praesent quis consectetur massa
                     </span>
-                    <span className="border-b border-white/85 cursor-pointer font-smooch opacity-90 font-medium text-xl w-fit">
+                    <span className="border-b border-white/85 cursor-pointer font-barlow opacity-90 font-medium text-lg w-fit">
                         Cras a ultricies eros
                     </span>
                 </div>
@@ -95,7 +95,7 @@ export const PrivacyPolicy: React.FC = () => {
                                 Sed porttitor elementum neque, eu dignissim
                                 sapien feugiat vitae.{" "}
                             </span>
-                            <span className="font-smooch opacity-85 font-medium text-xl">
+                            <span className="font-barlow opacity-85 font-medium text-lg">
                                 Mauris non facilisis quam, vel eleifend tellus.
                                 Duis volutpat neque id quam tempus, a pretium ex
                                 convallis. Sed ornare odio in condimentum
@@ -116,7 +116,7 @@ export const PrivacyPolicy: React.FC = () => {
                         <i className="ri-tv-2-line text-3xl" />
                         <div className="flex flex-col gap-4">
                             <span>Aenean rutrum venenatis laoreet</span>
-                            <span className="font-smooch opacity-85 font-medium text-xl">
+                            <span className="font-barlow opacity-85 font-medium text-lg">
                                 Nullam diam eros, consequat vel libero sit amet,
                                 venenatis egestas ligula. Ut dapibus volutpat
                                 diam dapibus tincidunt. Ut non porta nunc, et
@@ -131,7 +131,7 @@ export const PrivacyPolicy: React.FC = () => {
                         <i className="ri-trophy-line text-3xl" />
                         <div className="flex flex-col gap-4">
                             <span>Aliquam vitae viverra orci</span>
-                            <span className="font-smooch opacity-85 font-medium text-xl">
+                            <span className="font-barlow opacity-85 font-medium text-lg">
                                 Donec non convallis neque, tincidunt cursus
                                 lacus. Duis vel nisi pharetra, rhoncus neque eu,
                                 sodales nisi. Sed consectetur id erat sed
@@ -166,7 +166,7 @@ export const PrivacyPolicy: React.FC = () => {
                                 Vestibulum pretium gravida neque, vel maximus
                                 metus efficitur et
                             </span>
-                            <span className="font-smooch opacity-85 font-medium text-xl">
+                            <span className="font-barlow opacity-85 font-medium text-lg">
                                 Proin id nulla vitae nisi pulvinar scelerisque
                                 aliquam sed arcu. Quisque in volutpat lectus.
                                 Donec non felis sem.
@@ -180,7 +180,7 @@ export const PrivacyPolicy: React.FC = () => {
                             <span>
                                 Praesent quis gravida est, at rutrum nulla.
                             </span>
-                            <span className="font-smooch opacity-85 font-medium text-xl">
+                            <span className="font-barlow opacity-85 font-medium text-lg">
                                 Duis sit amet augue sit amet purus auctor
                                 interdum. Vestibulum eleifend nisl sed est
                                 luctus porta. Aenean in purus eget felis feugiat

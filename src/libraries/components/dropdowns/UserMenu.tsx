@@ -13,15 +13,15 @@ export const UserMenu: React.FC = () => {
             />
             {isFocused && (
                 <div className="text-white/90 w-80 flex flex-col mt-4 bg-black py-2 absolute top-full left-0 border-2 border-white/30 rounded-md">
-                    <div className="flex flex-col font-smooch text-xl/6 px-3 py-1">
+                    <div className="flex flex-col font-barlow text-xl/6 px-3 py-1">
                         <div className="flex gap-2 items-center">
-                            <h1 className="font-medium">Some Random Name</h1>
+                            <h1 className="text-base">Some Random Name</h1>
                             <i className="ri-verified-badge-fill" />
                         </div>
-                        <h2 className="flex">@johnwebsite </h2>
+                        <h2 className="text-sm">@johnwebsite </h2>
                     </div>
                     <div className="h-px bg-white/50 w-full my-2" />
-                    <div className="flex flex-col font-smooch text-lg">
+                    <div className="flex flex-col font-barlow text-base">
                         <div className="py-1 hover:bg-white/10 cursor-pointer">
                             <span className="px-3 flex gap-4 items-center">
                                 <i className="ri-user-smile-line" /> My Profile
@@ -40,7 +40,7 @@ export const UserMenu: React.FC = () => {
                         </div>
                     </div>
                     <div className="h-px bg-white/50 w-full my-2" />
-                    <div className="flex flex-col font-smooch text-lg">
+                    <div className="flex flex-col font-barlow text-base">
                         <div className="py-1 hover:bg-white/10 cursor-pointer">
                             <span className="px-3 flex gap-4 items-center">
                                 <i className="ri-settings-5-line" /> Settings

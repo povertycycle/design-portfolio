@@ -30,7 +30,7 @@ export const ThumbnaillessCard: React.FC<ThumbnaillessCardProps> = ({
                     {files} files
                 </div>
             )}
-            <div className="w-full h-full transition-[color,scale] bg-white/0 group-hover:bg-black-2.5 group-hover:scale-110 absolute rounded-lg left-0 top-0" />
+            <div className="w-full h-full transition-[color,scale] bg-white/0 group-hover:bg-black-1.5 group-hover:scale-110 absolute rounded-lg left-0 top-0" />
             <div className="h-32 aspect-video rounded-md  border-white/20 border relative z-1 flex flex-col items-center justify-center">
                 <i className="ri-image-line text-lg opacity-85" />
                 <span className="font-smooch">No Image</span>
@@ -58,9 +58,7 @@ export const ThumbnaillessCard: React.FC<ThumbnaillessCardProps> = ({
                     <span title={title} className="truncate">
                         {title}
                     </span>
-                    <span className="font-smooch font-medium text-lg/5">
-                        @{username}
-                    </span>
+                    <span className="font-barlow text-base/4">@{username}</span>
                 </div>
             </div>
         </div>

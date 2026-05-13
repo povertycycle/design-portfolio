@@ -13,7 +13,7 @@ export const NotificationSystem: React.FC = () => {
             >
                 <i className="ri-notification-3-line text-xl" />
             </div>
-            <div className="absolute -top-0.5 -right-0.5 text-xs translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full flex items-center justify-center bg-red-error text-white">
+            <div className="absolute top-0.5 right-0.5 text-xs translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full flex items-center justify-center bg-red-error text-white">
                 9+
             </div>
             {isFocused && <NotifTab />}
@@ -35,7 +35,7 @@ const NotifTab: React.FC = () => {
                     <div
                         key={option}
                         onClick={select(option)}
-                        className={`text-center w-full border-b cursor-pointer pb-2 pt-1 ${
+                        className={`text-center w-full border-b cursor-pointer pb-1 ${
                             tab === option
                                 ? "border-white text-white/90"
                                 : "border-white/60 hover:border-white/80 text-white/60 hover:text-white/80"
@@ -60,7 +60,7 @@ const NotifTab: React.FC = () => {
 
 const News: React.FC = () => {
     return (
-        <div className="w-full flex flex-col gap-1 mt-4 text-white/90 font-smooch text-xl font-medium">
+        <div className="w-full flex flex-col mt-2 text-white/90 font-barlow text-base">
             {[
                 {
                     time: "2026-05-04T12:27:18.996Z",
@@ -98,8 +98,8 @@ const News: React.FC = () => {
                         />
                     )}
                     <div className="flex flex-col">
-                        <span className="text-lg/6">{message}</span>
-                        <span className="text-base/4 opacity-80">
+                        <span className="text-base">{message}</span>
+                        <span className="text-sm opacity-80">
                             {timeAgo(time)}
                         </span>
                     </div>
@@ -111,7 +111,7 @@ const News: React.FC = () => {
 
 const Updates: React.FC = () => {
     return (
-        <div className="w-full flex flex-col gap-1 mt-4 text-white/90 font-smooch text-xl font-medium">
+        <div className="w-full flex flex-col mt-2 text-white/90 font-barlow text-sm">
             {[
                 {
                     time: "2026-05-04T12:27:18.996Z",
@@ -131,8 +131,8 @@ const Updates: React.FC = () => {
                     className="flex gap-3 hover:bg-white/10 cursor-pointer px-4 py-1"
                 >
                     <div className="flex flex-col">
-                        <span className="text-lg/6">{message}</span>
-                        <span className="text-base/4 opacity-80">
+                        <span className="text-base">{message}</span>
+                        <span className="text-sm opacity-80">
                             {timeAgo(time)}
                         </span>
                     </div>

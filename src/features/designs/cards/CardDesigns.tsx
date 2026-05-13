@@ -11,7 +11,7 @@ export const CardDesigns: React.FC = () => {
             <div className="flex flex-wrap gap-4 px-16">
                 <div className="w-80 flex flex-col">
                     <span className="my-auto text-xl">Video Card</span>
-                    <span className="opacity-75 italic text-base mt-1 mb-6 font-smooch">
+                    <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
                         Card, Video, Duration, VOD
                     </span>
                     <VideoCard
@@ -26,7 +26,7 @@ export const CardDesigns: React.FC = () => {
                     <span className="my-auto text-xl">
                         Livestream Video Card
                     </span>
-                    <span className="opacity-75 italic text-base mt-1 mb-6 font-smooch">
+                    <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
                         Card, Video, Livestream, Viewers
                     </span>
                     <LivestreamVideoCard
@@ -40,7 +40,7 @@ export const CardDesigns: React.FC = () => {
                 </div>
                 <div className="w-80 flex flex-col">
                     <span className="my-auto text-xl">Thumbnail-less Card</span>
-                    <span className="opacity-75 italic text-base mt-1 mb-6 font-smooch">
+                    <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
                         Card, Post, Image, Video, Count, No-Thumbnail
                     </span>
                     <ThumbnaillessCard

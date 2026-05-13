@@ -3,7 +3,7 @@ import Link from "next/link";
 export const LandingHeader: React.FC = () => {
     return (
         <div
-            className={`bg-transparent fixed top-0 left-0 w-full shrink-0 flex items-center z-50`}
+            className={`bg-transparent h-14 fixed top-0 left-0 w-full shrink-0 flex items-center z-50`}
         >
             <Link
                 href="/"
@@ -21,7 +21,7 @@ export const LandingHeader: React.FC = () => {
                 <Link href="/auth/login">
                     <TopMenu title="Login" />
                 </Link>
-                <Link href="/auth/register">
+                <Link href="/auth/login?register=true">
                     <TopMenu title="Join Us" />
                 </Link>
             </div>
@@ -29,9 +29,6 @@ export const LandingHeader: React.FC = () => {
     );
 };
 
-/**
- * [v2.0] - Custom helper component for hover animation.
- */
 const TopMenu: React.FC<{ title: string }> = ({ title }) => {
     return (
         <span className="whitespace-nowrap opacity-65 hover:opacity-100">

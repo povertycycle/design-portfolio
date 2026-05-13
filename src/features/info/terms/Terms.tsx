@@ -13,11 +13,11 @@ export const Terms: React.FC = () => {
                 <h2 className="text-xl opacity-90 mt-1">
                     Lorem ipsum dolor sit amet
                 </h2>
-                <p className="font-medium tracking-wide mt-1 italic font-smooch text-xl">
+                <p className="mt-1 italic font-barlow text-lg">
                     Updated at 01/01/1999
                 </p>
                 <div className="w-full h-0.5 bg-white/65 my-16" />
-                <p className="font-smooch text-xl font-medium">
+                <p className="font-barlow text-lg font-medium">
                     Suspendisse quis tempor neque. Maecenas finibus facilisis
                     neque, vitae gravida metus tempus vel. In hac habitasse
                     platea dictumst. Sed luctus, metus sed luctus vestibulum,
@@ -36,12 +36,12 @@ export const Terms: React.FC = () => {
                 <p className="font-normal text-2xl">
                     I. Maecenas eleifend neque
                 </p>
-                <div className="flex flex-col gap-8 mt-8">
+                <div className="flex flex-col gap-16 mt-16">
                     <div>
                         <span className="text-xl">
                             A tristique velit vulputate
                         </span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Nullam non vestibulum magna. Quisque tincidunt
                                 at ligula et blandit. Suspendisse potenti. Cras
@@ -74,7 +74,7 @@ export const Terms: React.FC = () => {
                     </div>
                     <div>
                         <span className="text-xl">Vestibulum ex orci</span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Praesent tortor nisi, viverra ut sem ut, congue
                                 interdum nulla. Sed at dolor egestas, tempor
@@ -98,10 +98,10 @@ export const Terms: React.FC = () => {
                 <p className="font-normal text-2xl">
                     II. Etiam condimentum id mauris
                 </p>
-                <div className="flex flex-col gap-8 mt-8">
+                <div className="flex flex-col gap-16 mt-16">
                     <div>
                         <span className="text-xl">Congue vestibulum</span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Morbi ante mauris, pulvinar eu metus porttitor,
                                 semper imperdiet sapien. Mauris metus nisl,
@@ -132,7 +132,7 @@ export const Terms: React.FC = () => {
                         <span className="text-xl">
                             Nulla at erat scelerisque
                         </span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Sed tristique ex libero, ut molestie sapien
                                 efficitur in. Vestibulum ante ipsum primis in
@@ -159,16 +159,16 @@ export const Terms: React.FC = () => {
                 <p className="font-normal text-2xl">
                     III. Imperdiet nisl ut tincidunt lacus
                 </p>
-                <p className="font-smooch font-medium tracking-wide opacity-85 mt-2 text-xl">
+                <p className="font-barlow opacity-85 mt-2 text-lg">
                     Nam ultrices tristique sem, eu fermentum metus rhoncus sit
                     amet. Nunc vitae lectus sed massa tristique rhoncus at ut
                     eros. In lorem erat, elementum eget gravida accumsan, porta
                     quis elit.
                 </p>
-                <div className="flex flex-col gap-8 mt-8">
+                <div className="flex flex-col gap-16 mt-16">
                     <div>
                         <span className="text-xl">Maecenas</span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Phasellus nec bibendum tortor, non congue nibh.
                                 Mauris metus enim, varius ut lacus ac, tincidunt
@@ -240,7 +240,7 @@ export const Terms: React.FC = () => {
                     </div>
                     <div>
                         <span className="text-xl">Risus lacus</span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>Vestibulum lobortis sed lorem et tristique.</li>
                             <li>
                                 Phasellus condimentum enim a diam efficitur
@@ -293,16 +293,16 @@ export const Terms: React.FC = () => {
                 <p className="font-normal text-2xl">
                     IV. Aenean ac finibus nisi
                 </p>
-                <p className="font-smooch font-medium tracking-wide opacity-85 mt-2 text-xl">
+                <p className="font-barlow opacity-85 mt-2 text-lg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec euismod placerat lacus vitae blandit. Duis porttitor
                     malesuada ornare. Vestibulum malesuada ac risus a finibus.
                     Suspendisse potenti.
                 </p>
-                <div className="flex flex-col gap-8 mt-8">
+                <div className="flex flex-col gap-16 mt-16">
                     <div>
                         <span className="text-xl">Sed et volutpat velit</span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Suspendisse vulputate sit amet nunc vel
                                 placerat. Nunc posuere quis massa sed facilisis.
@@ -332,7 +332,7 @@ export const Terms: React.FC = () => {
                         <span className="text-xl">
                             A fermentum enim rhoncus a
                         </span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>Praesent elementum neque arcu.</li>
                             <li>Fusce quis velit nec est mollis tempus.</li>
                             <li>Maecenas ornare lobortis tempor.</li>
@@ -344,7 +344,7 @@ export const Terms: React.FC = () => {
                     </div>
                     <div>
                         <span className="text-xl">Maecenas dictum iaculis</span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>Sed placerat ipsum eu fringilla dapibus.</li>
                             <li>Aenean sed libero lacus.</li>
                             <li>
@@ -372,7 +372,7 @@ export const Terms: React.FC = () => {
                     </div>
                     <div>
                         <span className="text-xl">Interdum</span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Nulla non est ac nunc aliquet aliquam vel sit
                                 amet nunc.
@@ -403,7 +403,7 @@ export const Terms: React.FC = () => {
                         <span className="text-xl">
                             Praesent eleifend egestas accumsan
                         </span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Praesent eleifend egestas accumsan. Donec
                                 hendrerit tellus sit amet auctor maximus. Donec
@@ -446,7 +446,7 @@ export const Terms: React.FC = () => {
                     </div>
                     <div>
                         <span className="text-xl">Duis ultricies</span>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Cras eu aliquam turpis. Aliquam sagittis turpis
                                 consequat urna finibus accumsan.
@@ -474,7 +474,7 @@ export const Terms: React.FC = () => {
                 </div>
                 <div className="w-full h-0.5 bg-white/65 my-16" />
                 <p className="font-normal text-2xl">V. Donec semper</p>
-                <p className="font-smooch font-medium tracking-wide opacity-85 mt-2 text-xl">
+                <p className="font-barlow opacity-85 mt-2 text-lg">
                     Nam euismod maximus velit malesuada rhoncus. Donec semper
                     eleifend elit sed tempus. Orci varius natoque penatibus et
                     magnis dis parturient montes, nascetur ridiculus mus.
@@ -483,9 +483,9 @@ export const Terms: React.FC = () => {
                     ultricies lectus sed tempus scelerisque. Nulla lobortis est
                     eget augue efficitur, ac eleifend velit malesuada:
                 </p>
-                <div className="flex flex-col gap-8 mt-8">
+                <div className="flex flex-col gap-16 mt-16">
                     <div>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>Duis dignissim in neque quis ultrices.</li>
                             <li>
                                 Pellentesque tincidunt enim tristique gravida
@@ -531,9 +531,9 @@ export const Terms: React.FC = () => {
                 </div>
                 <div className="w-full h-0.5 bg-white/65 my-16" />
                 <p className="font-normal text-2xl">VI. Aliquam magna</p>
-                <div className="flex flex-col gap-8 mt-8">
+                <div className="flex flex-col gap-16 mt-16">
                     <div>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Nullam at efficitur neque. Sed facilisis, augue
                                 sit amet eleifend dignissim, massa lacus
@@ -580,7 +580,7 @@ export const Terms: React.FC = () => {
                 </div>
                 <div className="w-full h-0.5 bg-white/65 my-16" />
                 <p className="font-normal text-2xl">VII. Sed a ornare sapien</p>
-                <p className="font-smooch font-medium tracking-wide mt-8 text-xl">
+                <p className="font-barlow mt-8 text-lg">
                     Morbi vulputate varius auctor. In ac quam elit. Nullam
                     fermentum vehicula enim, sed aliquet arcu auctor rhoncus.
                     Aliquam maximus turpis in porta ornare. Mauris blandit,
@@ -596,7 +596,7 @@ export const Terms: React.FC = () => {
                 <p className="font-normal text-2xl">
                     VIII. Fusce aliquam velit vulputate
                 </p>
-                <p className="font-smooch font-medium tracking-wide mt-2 text-xl opacity-85">
+                <p className="font-barlow mt-2 text-lg opacity-85">
                     Sed imperdiet purus eu ante feugiat, maximus feugiat elit
                     bibendum. Nam facilisis leo vel tristique ullamcorper.
                     Aliquam et posuere mauris, eget scelerisque urna. Donec
@@ -605,9 +605,9 @@ export const Terms: React.FC = () => {
                     faucibus. Donec tincidunt enim vel semper aliquam. Aenean
                     aliquet sagittis varius.
                 </p>
-                <div className="flex flex-col gap-8 mt-8">
+                <div className="flex flex-col gap-16 mt-16">
                     <div>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Vestibulum ante ipsum primis in faucibus orci
                                 luctus et ultrices posuere cubilia curae;
@@ -639,16 +639,16 @@ export const Terms: React.FC = () => {
                 </div>
                 <div className="w-full h-0.5 bg-white/65 my-16" />
                 <p className="font-normal text-2xl">IX. Donec sollicitudin</p>
-                <p className="font-smooch font-medium tracking-wide mt-2 text-xl opacity-85">
+                <p className="font-barlow mt-2 text-lg opacity-85">
                     Donec ullamcorper arcu ut facilisis vestibulum. Integer ut
                     neque mattis, faucibus quam a, tincidunt orci. Praesent eget
                     mauris id leo venenatis commodo. Donec libero nunc, suscipit
                     nec consequat eget, ultrices eget leo. Nulla in accumsan
                     metus, vel pellentesque odio:
                 </p>
-                <div className="flex flex-col gap-8 mt-8">
+                <div className="flex flex-col gap-16 mt-16">
                     <div>
-                        <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                        <ol className="list-disc mt-4 px-8 font-barlow text-base">
                             <li>
                                 Aenean ultrices turpis ac tincidunt egestas.
                                 Suspendisse potenti. Mauris aliquam felis
@@ -670,7 +670,7 @@ export const Terms: React.FC = () => {
                 <p className="font-normal text-2xl">
                     X. Vestibulum ante ipsum primis in faucibus
                 </p>
-                <p className="font-smooch font-medium tracking-wide mt-8 text-xl">
+                <p className="font-barlow mt-8 text-lg">
                     Fusce massa diam, lacinia a augue id, porta mollis libero.
                     Quisque tempor velit et sapien pulvinar, finibus condimentum
                     odio tempor. In quis velit eget sem vestibulum consequat.
@@ -678,20 +678,18 @@ export const Terms: React.FC = () => {
                     Interdum et malesuada fames ac ante ipsum primis in
                     faucibus.
                 </p>
-                <p className="font-smooch font-medium tracking-wide mt-2 text-xl">
-                    <strong className="text-lg/8">
-                        Curabitur nisl nisl, aliquam a tellus sed, venenatis
-                        mattis nisi.
-                    </strong>
+                <p className="font-barlow font-bold mt-2 text-lg">
+                    Curabitur nisl nisl, aliquam a tellus sed, venenatis mattis
+                    nisi.
                 </p>
-                <p className="font-smooch font-medium tracking-wide mt-2 text-xl">
+                <p className="font-barlow mt-2 text-lg">
                     Aliquam erat volutpat. Proin pretium, sapien eu molestie
                     maximus, massa ante tincidunt ipsum, a dignissim ipsum arcu
                     non nisl. Curabitur nisl lacus, lobortis id turpis ac,
                     auctor feugiat justo. Praesent vehicula aliquet ipsum, in
                     mattis nunc facilisis ut.
                 </p>
-                <ol className="list-disc mt-4 px-8 font-smooch font-medium text-xl">
+                <ol className="list-disc mt-4 px-8 font-barlow text-base">
                     <li>
                         Nam congue porttitor justo, at luctus magna viverra ut.
                     </li>

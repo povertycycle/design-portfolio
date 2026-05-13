@@ -14,7 +14,7 @@ export const AboutUs: React.FC = () => {
             <div className="flex w-full h-full relative items-center justify-center bg-black/65 z-1 p-24">
                 <div className="w-full max-w-7xl grid grid-cols-[auto_300px] h-140 border-2 border-white/15 rounded-2xl overflow-hidden">
                     <div className="bg-white/2 backdrop-blur-sm p-8 text-white flex flex-col border-r-2 border-white/15">
-                        <div className="flex flex-col text-white/75 font-medium tracking-wide text-xl font-smooch">
+                        <div className="flex flex-col text-white/75 font-medium tracking-wide text-xl font-barlow">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Curabitur euismod venenatis
@@ -41,10 +41,10 @@ export const AboutUs: React.FC = () => {
                         </div>
                         <div className="flex flex-col mt-auto">
                             <h1 className="text-3xl">Profile tagline</h1>
-                            <h2 className="text-xl text-white/65 italic mt-1 font-smooch font-medium">
+                            <h2 className="text-lg text-white/65 italic mt-1 font-barlow font-medium">
                                 Another cool tagline
                             </h2>
-                            <h3 className="text-white/65 mt-4 text-lg italic font-smooch">
+                            <h3 className="text-white/65 mt-4 text-base italic font-barlow">
                                 <span>Physical address, </span>
                                 <span>City, State, Country</span>
                             </h3>

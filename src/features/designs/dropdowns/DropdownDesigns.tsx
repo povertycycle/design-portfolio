@@ -9,7 +9,7 @@ export const DropdownDesigns: React.FC = () => {
             </h1>
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">Notification System</span>
-                <span className="opacity-75 italic text-base mt-1 mb-6 font-smooch">
+                <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
                     Dropdown, Notification
                 </span>
                 <NotificationSystem />
@@ -17,7 +17,7 @@ export const DropdownDesigns: React.FC = () => {
             <div className="my-20 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
                 <span className="my-auto text-xl">User Menu</span>
-                <span className="opacity-75 italic text-base mt-1 mb-6 font-smooch">
+                <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
                     Dropdown, User, Menu, Settings, Avatar
                 </span>
                 <UserMenu />
