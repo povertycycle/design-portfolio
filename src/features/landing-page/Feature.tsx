@@ -8,7 +8,7 @@ export const Feature: React.FC<FeatureProps> = ({ num, image }) => {
     return (
         <article
             id={`landing-feature-${num}`}
-            className="w-screen h-dvh sm:h-screen group shrink-0 flex flex-col items-center justify-center bg-black relative overflow-hidden"
+            className="w-screen border-t-2 border-white/25 h-dvh sm:h-screen group shrink-0 flex flex-col items-center justify-center bg-black relative overflow-hidden"
         >
             <div
                 className={`w-full h-full flex group-even:flex-row-reverse items-center justify-center gap-8 text-white`}
@@ -20,11 +20,9 @@ export const Feature: React.FC<FeatureProps> = ({ num, image }) => {
                     <div
                         className={`flex flex-col max-w-7xl w-full mx-auto mt-20 group-even:items-start group-odd:items-end`}
                     >
-                        <div className="px-7 py-8 bg-white/2 backdrop-blur-sm rounded-2xl max-w-120 flex flex-col">
+                        <div className="px-6 pb-5 pt-7 bg-white/2 backdrop-blur-sm rounded-2xl max-w-120 flex flex-col border-2 border-white/15">
                             <h1
-                                className={`text-3xl mt-1 ${
-                                    isOdd ? "" : "ml-auto"
-                                }`}
+                                className={`text-3xl ${isOdd ? "" : "ml-auto"}`}
                             >
                                 Feature Title
                             </h1>

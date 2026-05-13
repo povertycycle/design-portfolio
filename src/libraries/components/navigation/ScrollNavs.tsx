@@ -56,10 +56,10 @@ export const ScrollNavs: React.FC<ScrollNavsProps> = ({
     }, []);
 
     return (
-        <div className="h-dvh sm:h-screen fixed right-6 top-0 flex flex-col justify-end items-end">
+        <div className="h-dvh sm:h-screen fixed right-5 top-0 flex flex-col justify-end items-end">
             <div
                 ref={ref}
-                className="bg-gray-300 w-0.5 h-full right-0 flex flex-col items-end justify-end gap-6 text-lg font-raleway text-gray-300 font-medium"
+                className="bg-gray-300 w-0.5 h-full right-0 flex flex-col items-end justify-end gap-6 text-base font-raleway text-white font-medium"
             >
                 {children}
             </div>
@@ -71,15 +71,15 @@ export const ScrollNavs: React.FC<ScrollNavsProps> = ({
 const CompanySocials: React.FC = () => {
     return (
         <div className="flex flex-col items-end">
-            <div className="h-4 w-0.5 bg-gray-300" />
+            <div className="h-16 w-0.5 bg-gray-300" />
             {PROFILE_SOCIAL_MEDIA.map(({ url, remixicon }) => (
                 <Fragment key={remixicon}>
                     <Link
                         href={url}
                         target="_blank"
-                        className="border-2 shrink-0 border-white group mr-px rounded-full flex items-center justify-center w-8 h-8 text-white translate-x-1/2"
+                        className="border-2 shrink-0 border-white group mr-px rounded-full flex items-center justify-center w-7 h-7 text-white translate-x-1/2"
                     >
-                        <span className="hover:opacity-100 opacity-60 transition-opacity">
+                        <span className="hover:opacity-100 opacity-60 transition-opacity text-sm">
                             <i className={remixicon} />
                         </span>
                     </Link>

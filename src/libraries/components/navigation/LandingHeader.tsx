@@ -11,7 +11,7 @@ export const LandingHeader: React.FC = () => {
             >
                 <i className="ri-home-2-fill" />
             </Link>
-            <div className="h-full relative z-1 flex justify-end py-3 px-12 gap-8 w-full text-white text-xl font-medium tracking-wider">
+            <div className="h-full relative z-1 flex justify-end py-3 px-12 gap-8 w-full text-white text-lg font-medium">
                 <Link href="/designs">
                     <TopMenu title={"Designs"} />
                 </Link>

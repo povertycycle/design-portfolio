@@ -18,11 +18,8 @@ export const Navigation: React.FC = () => {
                         className="flex flex-row-reverse items-center gap-4 -mr-1.25 transition-[transform]"
                     >
                         <div className="w-3 h-3 rounded-full bg-gray-300" />
-                        <Link
-                            href={`#${anchorId}`}
-                            className="hover:text-white transition-opacity"
-                        >
-                            <span className="transition-opacity whitespace-nowrap opacity-60">
+                        <Link href={`#${anchorId}`}>
+                            <span className="transition-opacity whitespace-nowrap hover:opacity-95 opacity-60">
                                 {text}
                             </span>
                         </Link>
@@ -35,7 +32,7 @@ export const Navigation: React.FC = () => {
             >
                 <i className="ri-home-2-fill" />
             </Link>
-            <div className="h-full relative z-1 flex justify-center sm:justify-end py-5 sm:py-3 sm:px-12 gap-8 w-full text-white text-sm sm:text-xl font-medium tracking-wider">
+            <div className="h-full relative z-1 flex justify-center sm:justify-end py-5 sm:py-3 sm:px-12 gap-8 w-full text-white text-sm sm:text-lg font-medium">
                 <Link href={"/designs"}>
                     <TopMenu title={"Designs"} />
                 </Link>
@@ -55,7 +52,7 @@ export const Navigation: React.FC = () => {
 
 const TopMenu: React.FC<{ title: string }> = ({ title }) => {
     return (
-        <span className="whitespace-nowrap opacity-65 hover:opacity-100">
+        <span className="whitespace-nowrap opacity-75 hover:opacity-100">
             {title}
         </span>
     );

@@ -2,10 +2,10 @@ export const VideoPanel: React.FC = () => {
     return (
         <article className="w-full h-full shrink-0 flex flex-col justify-center items-center relative overflow-hidden">
             <div className="w-full h-full absolute left-0 top-0 bg-black/35 flex flex-col items-center justify-center text-white">
-                <h1 className="text-xl sm:text-9xl font-bold">
+                <h1 className="text-xl sm:text-8xl font-bold">
                     William Sentosatio
                 </h1>
-                <h2 className="text-sm italic sm:text-3xl mt-4 sm:mt-8 font-smooch font-medium text-center">
+                <h2 className="text-sm italic sm:text-2xl mt-4 sm:mt-8 font-smooch font-medium text-center">
                     Collections of visual design for web components, UI
                     libraries, and prototypes.
                 </h2>
