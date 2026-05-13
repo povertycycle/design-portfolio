@@ -32,7 +32,7 @@ export const Questions: React.FC = () => {
                                 className="peer group/title text-3xl cursor-pointer flex items-center text-white/85 group-even:flex-row-reverse justify-between"
                             >
                                 {question}{" "}
-                                <i className="group-focus/title:rotate-180 transition-transform ri-arrow-down-s-line" />
+                                <i className="group-odd:group-focus/title:rotate-180 group-even:group-focus/title:-rotate-180 transition-transform ri-arrow-down-s-line" />
                             </span>
                             <div
                                 className={`font-smooch peer-focus:max-h-71 mt-5 peer-focus:mb-5 transition-[max-height,margin] max-h-0 overflow-hidden text-white text-base sm:text-xl font-medium`}
