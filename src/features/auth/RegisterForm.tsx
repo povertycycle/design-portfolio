@@ -1,70 +1,71 @@
-import { UserData } from "@/src/interfaces/user";
-import { USER_DATA } from "@/src/constants/users";
+import { RequireVerification } from "./RequireVerification";
 import { Hyperlink } from "@/src/libraries/components/misc/Hyperlink";
 import useToast from "@/src/libraries/components/notification/Toast";
 import { ChangeEvent, useState } from "react";
-import { LoginPayload } from "./types";
 import { Spinner } from "@/src/libraries/components/loading/Spinner";
-import { AlternativeSignIn } from "../external/AlternativeSignIn";
+import { AlternativeSignIn } from "./AlternativeSignIn";
 import { PasswordInput } from "@/src/libraries/components/inputs/PasswordInput";
+import { RegisterPayload } from "./types";
 
-export const LoginForm: React.FC = () => {
-    const onSuccess = (res: UserData) => {
-        // Redirect to dashboard
+export const RegisterForm: React.FC = () => {
+    const [success, setSuccess] = useState<boolean | undefined>();
+    const onSuccess = () => {
+        setSuccess(true);
     };
 
     return (
-        <div className={"w-160 absolute h-full z-1 flex"}>
-            <Form onSuccess={onSuccess} />
+        <div className={"w-160 absolute h-full z-1 flex justify-end"}>
+            {!!success ? (
+                <RequireVerification />
+            ) : (
+                <Form onSuccess={onSuccess} />
+            )}
             <img
-                src="/design-portfolio/img/pexels-wal_-172619-2156618639-36077711.jpg"
+                src="/design-portfolio/img/pexels-zak-mogel-2158251013-35883712.jpg"
                 className="absolute h-full w-full object-cover top-0 left-0"
             />
         </div>
     );
 };
 
-interface LoginFormProps {
-    onSuccess?: (res: UserData) => void;
+interface RegisterFormProps {
+    onSuccess: () => void;
 }
 
-export const Form: React.FC<LoginFormProps> = ({ onSuccess }) => {
+export const Form: React.FC<RegisterFormProps> = ({ onSuccess }) => {
     const { toast, Toast } = useToast();
-    const success = (res: UserData) => {
-        toast("Successfully logged-in");
-        onSuccess?.(res);
+    const success = () => {
+        toast("Registration successful!");
+        onSuccess?.();
     };
 
     return (
-        <div className="border-l-2 border-white/15 w-full relative z-1 text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
+        <div className="border-r-2 border-white/15 w-full relative z-1 text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
             {Toast}
-            <span className="text-2xl">Hi, Welcome Back!</span>
-            <div className="flex gap-1 items-center font-barlow text-base">
-                We&apos;ve been waiting for your return!
+            <span className="text-2xl ml-auto">Hello there!</span>
+            <div className="flex gap-1 items-center font-medium font-barlow text-base ml-auto">
+                <span>Create your free account here! or</span>
+                <span className="text-gold text-sm/4 mt-1 font-fjalla">
+                    <Hyperlink url="/auth/login">Sign-in</Hyperlink>
+                </span>
             </div>
             <div className="w-full flex flex-col mt-12">
                 <Fields onSuccess={success} />
-                <div className="flex gap-1 justify-center mt-12 items-center font-medium font-barlow text-base">
-                    Don&apos;t have an account?
-                    <span className="text-gold font-fjalla text-sm/4 mt-1">
-                        <Hyperlink url="/auth/login?register=true">
-                            Sign-up
-                        </Hyperlink>
-                    </span>
-                </div>
             </div>
         </div>
     );
 };
 
-const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
-    const [formData, setFormData] = useState<Partial<LoginPayload>>({});
+const Fields: React.FC<RegisterFormProps> = ({ onSuccess }) => {
+    const [formData, setFormData] = useState<Partial<RegisterPayload>>({});
     const [loading, setLoading] = useState<boolean>(false);
     const validatePayload = () => {
+        if (loading) return;
+
         setLoading(true);
         window.setTimeout(() => {
             setLoading(false);
-            onSuccess?.(USER_DATA);
+            onSuccess?.();
         }, 3000);
     };
 
@@ -84,14 +85,20 @@ const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
         >
             <input
                 className="auth__input--default"
+                placeholder="Username"
+                autoComplete="username"
+                value={formData.username ?? ""}
+                onChange={handleChange("username")}
+            />
+            <input
+                className="auth__input--default"
                 placeholder="Email"
                 autoComplete="email"
                 value={formData.email ?? ""}
                 onChange={handleChange("email")}
             />
             <PasswordInput />
-            <ForgotPassword />
-            <div className="flex justify-between w-full">
+            <div className="flex justify-between w-full mt-12">
                 <AlternativeSignIn />
                 <button
                     disabled={!formData.email}
@@ -100,19 +107,11 @@ const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
                             ? ""
                             : "not-disabled:cursor-pointer not-disabled:hover:bg-white/95"
                     } bg-white text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
-                    onClick={validatePayload}
+                    onClick={loading ? undefined : validatePayload}
                 >
-                    {loading ? <Spinner /> : "Login"}
+                    {loading ? <Spinner /> : "Register"}
                 </button>
             </div>
         </form>
-    );
-};
-
-const ForgotPassword: React.FC = () => {
-    return (
-        <div className="w-fit mr-1 font-barlow text-white/45 hover:text-white/75 text-base italic text-end cursor-pointer transition-colors">
-            Forgot Password?
-        </div>
     );
 };
