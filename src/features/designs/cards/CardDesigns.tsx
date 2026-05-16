@@ -1,3 +1,4 @@
+import { CommunityCard } from "@/src/libraries/components/cards/CommunityCard";
 import { LivestreamVideoCard } from "@/src/libraries/components/cards/LivestreamVideoCard";
 import { ProfileCard } from "@/src/libraries/components/cards/ProfileCard";
 import { ThumbnaillessCard } from "@/src/libraries/components/cards/ThumbnaillessCard";
@@ -58,9 +59,41 @@ export const CardDesigns: React.FC = () => {
                 <div className="w-80 flex flex-col justify-start">
                     <span className="text-xl">Profile Card</span>
                     <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
-                        Card, Profile, Description, Portrait, Tags
+                        Card, Profile, Description, Portrait, Socials, Avatar,
+                        Bio
                     </span>
                     <ProfileCard
+                        banner="pexels-erkocphoto-32146234-medium.jpg"
+                        avatar="avatar.jfif"
+                        username="povertycycle"
+                        bio="Struggling to survive everyday"
+                        role="Engineer and Designer"
+                        socials={[
+                            {
+                                type: "YOUTUBE",
+                                url: "https://www.youtube.com/@povertycycle",
+                            },
+                            {
+                                type: "INSTAGRAM",
+                                url: "https://www.instagram.com/william.sentosatio/",
+                            },
+                            {
+                                type: "LINKEDIN",
+                                url: "https://www.linkedin.com/in/william-sentosatio/",
+                            },
+                            {
+                                type: "GITHUB",
+                                url: "https://github.com/povertycycle/",
+                            },
+                        ]}
+                    />
+                </div>
+                <div className="w-80 flex flex-col justify-start">
+                    <span className="text-xl">Community Card</span>
+                    <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
+                        Card, Community, Description, Portrait, Tags
+                    </span>
+                    <CommunityCard
                         banner="pexels-pspov-3046628-medium.jpg"
                         community="Brookstone Haven Scuba Club"
                         description="Vestibulum commodo nec nisi vel laoreet."
