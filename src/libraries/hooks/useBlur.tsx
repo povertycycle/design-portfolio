@@ -14,10 +14,14 @@ export const useBlur = () => {
             document.removeEventListener("mouseup", handler);
         };
     }, []);
-    const focus: MouseEventHandler<HTMLInputElement> = (e) => {
+    const focus: MouseEventHandler<HTMLElement> = (e) => {
         e?.stopPropagation();
         setIsFocused(true);
     };
+    const unFocus: MouseEventHandler<HTMLElement> = (e) => {
+        e?.stopPropagation();
+        setIsFocused(false);
+    };
 
-    return { isFocused, focus, ref };
+    return { isFocused, focus, ref, unFocus };
 };

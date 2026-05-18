@@ -1,3 +1,4 @@
+import { Filter } from "@/src/libraries/components/dropdowns/Filter";
 import { NotificationSystem } from "@/src/libraries/components/dropdowns/NotificationSystem";
 import { UserMenu } from "@/src/libraries/components/dropdowns/UserMenu";
 
@@ -22,6 +23,23 @@ export const DropdownDesigns: React.FC = () => {
                 </span>
                 <UserMenu />
             </div>
+            <div className="my-20 w-full h-px bg-white/35" />
+            <div className="w-lg flex flex-col mx-auto">
+                <span className="my-auto text-xl">Filter Menu</span>
+                <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
+                    Dropdown, Filter, Options, Close, Values
+                </span>
+                <Filter
+                    options={[
+                        "Option",
+                        "Selection",
+                        "Choice",
+                        "Electee",
+                        "Representative",
+                    ]}
+                />
+            </div>
+            <div className="my-20 w-full h-px bg-white/35" />
         </div>
     );
 };
