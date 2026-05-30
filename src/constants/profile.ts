@@ -17,3 +17,21 @@ export const PROFILE_SOCIAL_MEDIA: {
         remixicon: "ri-linkedin-line",
     },
 ];
+export const MY_SOCIALS = [
+    {
+        type: "YOUTUBE",
+        url: "https://www.youtube.com/@povertycycle",
+    },
+    {
+        type: "INSTAGRAM",
+        url: INSTRAGRAM_URL,
+    },
+    {
+        type: "LINKEDIN",
+        url: "https://www.linkedin.com/in/william-sentosatio/",
+    },
+    {
+        type: "GITHUB",
+        url: "https://github.com/povertycycle/",
+    },
+];

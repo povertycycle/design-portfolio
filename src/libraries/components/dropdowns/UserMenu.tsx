@@ -8,7 +8,7 @@ export const UserMenu: React.FC = () => {
         <div ref={ref} className="relative flex flex-col w-8 h-8">
             <Avatar
                 onClick={focus}
-                avatar="/design-portfolio/img/avatar.jfif"
+                avatar="avatar.jfif"
                 className="rounded-full cursor-pointer"
             />
             {isFocused && (

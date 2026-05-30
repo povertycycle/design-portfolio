@@ -21,3 +21,14 @@ export function formatBytes(number?: number | null) {
         .format(number ?? 0)
         .replace("BB", "GB");
 }
+
+export function formatCurrency(
+    amount?: number | null,
+    currency = "USD"
+): string {
+    return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency,
+        ...(currency === "IDR" && { maximumFractionDigits: 0 }),
+    }).format(amount ?? 0);
+}

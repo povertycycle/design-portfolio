@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Avatar } from "../misc/Avatar";
+import { CreatorData } from "../misc/CreatorData";
 
 interface ProfileCardProps {
     banner: string;
@@ -23,14 +25,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
             className="w-full aspect-2/3 group relative cursor-pointer flex flex-col shrink-0"
         >
             <div className="w-full h-full relative z-1 bg-black/50 group-hover:bg-black/65 rounded-b-xl border-t-2 border-white/5 transition-colors duration-400 flex flex-col p-4">
-                <img
-                    className="border-2 border-white/25 mx-auto mt-8 rounded-full h-16 w-16 relative z-2"
-                    src={`/design-portfolio/img/${avatar}`}
-                />
-                <h1 className="mx-auto mt-4">@{username}</h1>
-                <span className="mx-auto font-barlow text-base opacity-85">
-                    {role}
-                </span>
+                <CreatorData avatar={avatar} username={username} role={role} />
                 <span className="my-auto font-barlow text-sm/5 opacity-85 mx-auto text-center italic">
                     {bio}
                 </span>

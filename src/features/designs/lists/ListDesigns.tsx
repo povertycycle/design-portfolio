@@ -1,5 +1,6 @@
 import { CategoryList } from "@/src/libraries/components/list/CategoryList";
 import { HorizontalList } from "@/src/libraries/components/list/HorizontalList";
+import { Pagination } from "@/src/libraries/components/list/Pagination";
 
 export const ListDesigns: React.FC = () => {
     return (
@@ -7,6 +8,16 @@ export const ListDesigns: React.FC = () => {
             <h1 className="text-2xl px-16 pt-6 pb-6 mb-20 w-full z-50 sticky top-0 bg-black border-b border-white/50">
                 List Designs
             </h1>
+            <div className="flex flex-col w-full mx-auto px-4 justify-center">
+                <div className="w-lg flex flex-col mx-auto">
+                    <span className="text-xl">Pagination List</span>
+                    <span className="opacity-75 italic text-sm mt-1 mb-2 font-barlow">
+                        List, Horizontal, Pagination, Numbers, Page
+                    </span>
+                </div>
+                <Pagination maxPages={99} />
+            </div>
+            <div className="my-24 w-full h-px bg-white/35" />
             <div className="flex flex-col w-full mx-auto px-4">
                 <div className="w-lg flex flex-col mx-auto">
                     <span className="text-xl">

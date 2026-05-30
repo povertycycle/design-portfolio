@@ -20,7 +20,7 @@ export const Avatar: React.FC<
         <div
             data-cy="user-avatar"
             {...otherProps}
-            className={`${className} w-8 h-8 overflow-hidden bg-white relative aspect-square`}
+            className={`${className} w-8 h-8 overflow-hidden relative aspect-square`}
             style={style}
         >
             <div
@@ -29,7 +29,7 @@ export const Avatar: React.FC<
                 {avatar ? (
                     <img
                         alt=""
-                        src={avatar}
+                        src={`/design-portfolio/img/${avatar}`}
                         width={size}
                         height={size}
                         className="w-full h-full object-cover"
