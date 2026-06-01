@@ -13,7 +13,7 @@ export const Filter: React.FC<FilterProps> = ({ options }) => {
         <div ref={ref} className="relative flex flex-col w-fit">
             <div
                 onClick={focus}
-                className="pl-4 pr-3 h-8 my-auto flex justify-between gap-4 w-40 border-white/30 border-2 whitespace-nowrap text-white/75 rounded-sm bg-black-1 hover:bg-black-2.5 cursor-pointer items-center"
+                className="pl-4 pr-3 h-8 my-auto flex justify-between gap-4 w-40 border-white/30 border-2 whitespace-nowrap text-white/75 rounded-sm bg-black-1 hover:bg-black-1.5 cursor-pointer items-center"
             >
                 {value ? (
                     <>
