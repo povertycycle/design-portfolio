@@ -7,15 +7,23 @@ import { LoginPayload } from "./types";
 import { Spinner } from "@/src/libraries/components/loading/Spinner";
 import { AlternativeSignIn } from "./AlternativeSignIn";
 import { PasswordInput } from "@/src/libraries/components/inputs/PasswordInput";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { ResetPasswordForm } from "./ResetPasswordForm";
 
 export const LoginForm: React.FC = () => {
-    const onSuccess = (res: UserData) => {
-        // Redirect to dashboard
-    };
+    const params = useSearchParams();
+    const isResetPassword = params?.get("reset-password") === "true";
 
     return (
         <div className={"w-160 absolute h-full z-1 flex"}>
-            <Form onSuccess={onSuccess} />
+            <div
+                data-reset={isResetPassword}
+                className="flex flex-col w-full h-full relative z-1 translate-y-0 data-[reset=true]:-translate-y-full duration-500"
+            >
+                <Form />
+                <ResetPasswordForm />
+            </div>
             <img
                 src="/design-portfolio/img/pexels-wal_-172619-2156618639-36077711.jpg"
                 className="absolute h-full w-full object-cover top-0 left-0"
@@ -24,19 +32,14 @@ export const LoginForm: React.FC = () => {
     );
 };
 
-interface LoginFormProps {
-    onSuccess?: (res: UserData) => void;
-}
-
-export const Form: React.FC<LoginFormProps> = ({ onSuccess }) => {
+export const Form: React.FC = () => {
     const { toast, Toast } = useToast();
     const success = (res: UserData) => {
         toast("Successfully logged-in");
-        onSuccess?.(res);
     };
 
     return (
-        <div className="border-l-2 border-white/15 w-full relative z-1 text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
+        <div className="border-l-2 shrink-0 border-white/15 w-full relative z-1 text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
             {Toast}
             <span className="text-2xl">Hi, Welcome Back!</span>
             <div className="flex gap-1 items-center font-barlow text-base">
@@ -57,14 +60,14 @@ export const Form: React.FC<LoginFormProps> = ({ onSuccess }) => {
     );
 };
 
-const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
+const Fields: React.FC<{ onSuccess: Function }> = ({ onSuccess }) => {
     const [formData, setFormData] = useState<Partial<LoginPayload>>({});
     const [loading, setLoading] = useState<boolean>(false);
     const validatePayload = () => {
         setLoading(true);
         window.setTimeout(() => {
             setLoading(false);
-            onSuccess?.(USER_DATA);
+            onSuccess();
         }, 3000);
     };
 
@@ -111,8 +114,11 @@ const Fields: React.FC<LoginFormProps> = ({ onSuccess }) => {
 
 const ForgotPassword: React.FC = () => {
     return (
-        <div className="w-fit mr-1 font-barlow text-white/45 hover:text-white/75 text-base italic text-end cursor-pointer transition-colors">
+        <Link
+            href={"/auth/login?reset-password=true"}
+            className="w-fit mr-1 font-barlow text-white/45 hover:text-white/75 text-base italic text-end cursor-pointer transition-colors"
+        >
             Forgot Password?
-        </div>
+        </Link>
     );
 };
