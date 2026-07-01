@@ -17,7 +17,7 @@ export const CommunityCard: React.FC<CommunityCardProps> = ({
 }) => {
     return (
         <div className="w-full aspect-2/3 group relative cursor-pointer flex flex-col shrink-0">
-            <div className="w-full h-full relative z-1 bg-black/50 rounded-xl group-hover:bg-black/65 transition-colors duration-400 flex flex-col justify-end p-4">
+            <div className="w-full h-full relative z-2 bg-linear-to-b from-black/50 to-transparent via-5% to-25% rounded-xl transition-colors flex flex-col justify-end p-4">
                 <div className="mb-auto flex justify-between gap-8">
                     <span className="font-barlow text-sm italic opacity-85 mb-auto">
                         {tags.join(", ")}
@@ -31,6 +31,7 @@ export const CommunityCard: React.FC<CommunityCardProps> = ({
                     {formatCount(members, "member")}
                 </span>
             </div>
+            <div className="bg-black/25 backdrop-blur-lg z-1 rounded-xl mask-t-from-35% w-full group-hover:h-full transition-[height,top] h-1/2 absolute bottom-0 left-0" />
             <img
                 src={`/design-portfolio/img/${banner}`}
                 className="absolute left-0 top-0 w-full h-full rounded-xl object-cover"
