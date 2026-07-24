@@ -6,7 +6,7 @@ export const Button: React.FC<{
 }> = ({ children, style }) => {
     return (
         <div
-            className={`bg-black-1 h-10 w-10 flex items-center justify-center rounded-full relative`}
+            className={`bg-black h-10 w-10 flex items-center justify-center rounded-full relative`}
         >
             <div
                 style={style}
