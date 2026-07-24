@@ -9,7 +9,7 @@ export const ResetPasswordForm: React.FC = () => {
     const success = () => toast("Successfully logged-in");
 
     return (
-        <section className="border-l-2 shrink-0 border-white/15 w-full relative z-1 text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
+        <section className="border-l-2 shrink-0 border-white/15 w-full relative z-1 text-white-1 flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
             {Toast}
             <h1 className="text-2xl">Forgot your password?</h1>
             <h2 className="flex gap-1 items-center font-barlow text-base">
@@ -62,7 +62,7 @@ const Fields: React.FC<{ onSuccess: Function }> = ({ onSuccess }) => {
                         loading
                             ? ""
                             : "not-disabled:cursor-pointer not-disabled:hover:bg-white/95"
-                    } bg-white text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
+                    } bg-white-1 text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
                     onClick={validatePayload}
                 >
                     {loading ? <Spinner /> : "Send Request"}

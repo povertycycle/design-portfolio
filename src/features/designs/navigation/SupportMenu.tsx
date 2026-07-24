@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const SupportMenu: React.FC = () => {
     return (
-        <div className="flex flex-col text-base gap-1 font-barlow text-white w-full tracking-wide px-3 whitespace-nowrap">
+        <div className="flex flex-col text-base gap-1 font-barlow text-white-1 w-full tracking-wide px-3 whitespace-nowrap">
             {MENU.map(({ icon, title, url, target }) => (
                 <Link
                     key={url}

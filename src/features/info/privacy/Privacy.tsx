@@ -28,14 +28,14 @@ export const PrivacyPolicy: React.FC = () => {
                                     .getElementById(anchorId)
                                     ?.scrollIntoView()
                             }
-                            className="cursor-pointer hover:opacity-80 text-white transition-opacity opacity-60 whitespace-nowrap"
+                            className="cursor-pointer hover:opacity-80 text-white-1 transition-opacity opacity-60 whitespace-nowrap"
                         >
                             {text}
                         </span>
                     </div>
                 ))}
             </ScrollNavs>
-            <div className="max-w-3xl m-auto px-8 text-white shrink-0 w-full">
+            <div className="max-w-3xl m-auto px-8 text-white-1 shrink-0 w-full">
                 <h1 className="text-3xl tracking-wide font-bold">
                     Privacy Policy
                 </h1>
@@ -76,7 +76,7 @@ export const PrivacyPolicy: React.FC = () => {
             <div className="mt-16 w-full bg-white/50 h-px shrink-0" />
             {PRIVACY_SECTIONS.map(({ text, anchorId, child }, i) => (
                 <div id={anchorId} className="flex flex-col" key={text}>
-                    <div className="max-w-3xl my-16 mx-auto px-8 text-white shrink-0 flex flex-col gap-8 w-full">
+                    <div className="max-w-3xl my-16 mx-auto px-8 text-white-1 shrink-0 flex flex-col gap-8 w-full">
                         <span className="text-xl">{text}</span>
                         {child}
                     </div>
@@ -84,7 +84,7 @@ export const PrivacyPolicy: React.FC = () => {
                 </div>
             ))}
             <div className="flex flex-col">
-                <div className="max-w-3xl my-16 mx-auto px-8 text-white shrink-0 flex flex-col gap-8 w-full">
+                <div className="max-w-3xl my-16 mx-auto px-8 text-white-1 shrink-0 flex flex-col gap-8 w-full">
                     <span className="text-xl">
                         Maecenas hendrerit odio et tincidunt fermentum
                     </span>

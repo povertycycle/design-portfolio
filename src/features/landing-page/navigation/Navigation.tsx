@@ -29,11 +29,11 @@ export const Navigation: React.FC = () => {
             </ScrollNavs>
             <Link
                 href="/"
-                className="h-full aspect-square text-white flex items-center justify-center text-2xl"
+                className="h-full aspect-square text-white-1 flex items-center justify-center text-2xl"
             >
                 <i className="ri-home-2-fill" />
             </Link>
-            <div className="h-full relative z-1 flex justify-center sm:justify-end py-5 sm:py-3 sm:px-12 gap-8 w-full text-white text-sm sm:text-lg font-medium">
+            <div className="h-full relative z-1 flex justify-center sm:justify-end py-5 sm:py-3 sm:px-12 gap-8 w-full text-white-1 text-sm sm:text-lg font-medium">
                 <Link href={"/designs"}>
                     <TopMenu title={"Designs"} />
                 </Link>

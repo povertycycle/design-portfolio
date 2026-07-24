@@ -3,13 +3,16 @@ import { TIER_OPTIONS } from "@/src/constants/subs";
 import { CommunityCard } from "@/src/libraries/components/cards/CommunityCard";
 import { LivestreamVideoCard } from "@/src/libraries/components/cards/LivestreamVideoCard";
 import { ProfileCard } from "@/src/libraries/components/cards/ProfileCard";
+import { PurchaseCard } from "@/src/libraries/components/cards/purchase-card/PurchaseCard";
+import { RequestCard } from "@/src/libraries/components/cards/RequestCard";
 import { SubscriptionCard } from "@/src/libraries/components/cards/subscription-card/SubscriptionCard";
 import { ThumbnaillessCard } from "@/src/libraries/components/cards/ThumbnaillessCard";
 import { VideoCard } from "@/src/libraries/components/cards/VideoCard";
+import { FriendMenu } from "@/src/libraries/components/misc/FriendMenu";
 
 export const CardDesigns: React.FC = () => {
     return (
-        <div className="h-full pb-24 text-white w-full overflow-y-auto sleek-scroll ">
+        <div className="h-full pb-24 text-white-1 w-full overflow-y-auto sleek-scroll ">
             <h1 className="text-2xl px-16 pt-6 pb-6 mb-20 w-full z-50 sticky top-0 bg-black border-b border-white/50">
                 Card Designs
             </h1>
@@ -95,6 +98,24 @@ export const CardDesigns: React.FC = () => {
                             ]}
                         />
                     </div>
+                    <div className="w-60 flex flex-col justify-start">
+                        <span className="text-xl">Friend Card</span>
+                        <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
+                            Card, Profile, Description, Portrait, Socials,
+                            Avatar, Bio, Message, Menu
+                        </span>
+                        <div className="mr-autow-full relative">
+                            <ProfileCard
+                                banner="pexels-erkocphoto-32146234-medium.jpg"
+                                avatar="avatar.jfif"
+                                username="povertycycle"
+                                bio="Struggling to survive everyday"
+                                role="Engineer and Designer"
+                                socials={MY_SOCIALS}
+                            />
+                            <FriendMenu />
+                        </div>
+                    </div>
                 </div>
                 <div className="my-20 w-full h-px bg-white/35" />
                 <div className="flex gap-8 mx-auto">
@@ -145,6 +166,51 @@ export const CardDesigns: React.FC = () => {
                         />
                     </div>
                 </div>
+                <div className="my-20 w-full h-px bg-white/35" />
+                <div className="flex gap-8 mx-auto">
+                    <div className="flex flex-col justify-start">
+                        <span className="text-xl">Friend Request Card</span>
+                        <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
+                            Card, Avatar, Username, Banner, Friend, Request,
+                            Accept
+                        </span>
+                        <RequestCard
+                            {...{
+                                banner: "pexels-erkocphoto-32146234-medium.jpg",
+                                avatar: "lilaggy-avatar.png",
+                                username: "lilaggy",
+                                role: "Gamer",
+                                viewers: 1493819,
+                            }}
+                        />
+                    </div>
+                    <div className="flex flex-col justify-start">
+                        <span className="text-xl">Sent Request Card</span>
+                        <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
+                            Card, Avatar, Username, Banner, Friend, Request,
+                            Accept, Sent, Decline
+                        </span>
+                        <RequestCard
+                            {...{
+                                banner: "pexels-dmytkopl-34580394-medium.jpg",
+                                avatar: "parkenharbor-avatar.png",
+                                username: "parkenharbor",
+                                role: "Soulsrunner",
+                            }}
+                            isIncoming
+                        />
+                    </div>
+                </div>
+                <div className="my-20 w-full h-px bg-white/35" />
+                <div className="flex flex-col justify-start max-w-4xl w-full mx-auto">
+                    <span className="text-xl">Purchase Card</span>
+                    <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
+                        Card, Avatar, Username, Purchase, Transaction, Date,
+                        Subscription, Donation, Price, Copy
+                    </span>
+                    <PurchaseCard />
+                </div>
+                <div className="my-20 w-full h-px bg-white/35" />
             </div>
         </div>
     );

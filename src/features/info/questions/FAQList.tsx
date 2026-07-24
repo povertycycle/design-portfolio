@@ -1,13 +1,13 @@
 export const FAQList: React.FC = () => {
     return (
-        <div className="flex flex-col h-full border-r border-white/75 p-8 w-full text-white">
+        <div className="flex flex-col h-full border-r border-white/75 p-8 w-full text-white-1">
             <div className="relative h-8">
                 <input
                     className="faqs__input--search peer"
                     placeholder="Search a question"
                 />
                 <div className="absolute left-1 top-0 h-full aspect-square flex items-center justify-center">
-                    <i className="ri-search-line text-white/60 peer-focus:text-white" />
+                    <i className="ri-search-line text-white/60 peer-focus:text-white-1" />
                 </div>
             </div>
             <div className="flex flex-col gap-8 mt-12 h-0 overflow-auto sleek-scroll pr-2 grow">

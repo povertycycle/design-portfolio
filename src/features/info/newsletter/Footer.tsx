@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
                         <Link
                             href={url}
                             key={remixicon}
-                            className="text-white/60 hover:text-white flex items-center justify-center w-9 h-9 text-xl rounded-sm"
+                            className="text-white/60 hover:text-white-1 flex items-center justify-center w-9 h-9 text-xl rounded-sm"
                         >
                             <i className={remixicon} />
                         </Link>

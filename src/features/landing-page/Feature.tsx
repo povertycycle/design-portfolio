@@ -11,7 +11,7 @@ export const Feature: React.FC<FeatureProps> = ({ num, image }) => {
             className="w-screen border-t-2 border-white/25 h-dvh sm:h-screen group shrink-0 flex flex-col items-center justify-center bg-black relative overflow-hidden"
         >
             <div
-                className={`w-full h-full flex group-even:flex-row-reverse items-center justify-center gap-8 text-white`}
+                className={`w-full h-full flex group-even:flex-row-reverse items-center justify-center gap-8 text-white-1`}
             >
                 <img alt={image} src={image} className="object-cover" />
                 <div

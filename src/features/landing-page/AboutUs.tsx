@@ -13,7 +13,7 @@ export const AboutUs: React.FC = () => {
             </div>
             <div className="flex w-full h-full relative items-center justify-center bg-black/65 z-1 p-24">
                 <div className="w-full max-w-7xl grid grid-cols-[auto_300px] h-140 border-2 border-white/15 rounded-2xl overflow-hidden">
-                    <div className="bg-white/2 backdrop-blur-sm p-8 text-white flex flex-col border-r-2 border-white/15">
+                    <div className="bg-white/2 backdrop-blur-sm p-8 text-white-1 flex flex-col border-r-2 border-white/15">
                         <div className="flex flex-col text-white/75 font-medium tracking-wide text-xl font-barlow">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur

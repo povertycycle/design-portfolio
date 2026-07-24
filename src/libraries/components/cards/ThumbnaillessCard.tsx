@@ -20,13 +20,13 @@ export const ThumbnaillessCard: React.FC<ThumbnaillessCardProps> = ({
 }) => {
     return (
         <div className="group relative cursor-pointer flex flex-col shrink-0 w-57">
-            <div className="text-xs left-1 top-1 absolute px-1 py-0.5 bg-black flex gap-1 items-center justify-center text-white rounded-xs z-2">
+            <div className="text-xs left-1 top-1 absolute px-1 py-0.5 bg-black flex gap-1 items-center justify-center text-white-1 rounded-xs z-2">
                 {formatCount(stars)}{" "}
                 <i className="ri-star-fill text-gold -translate-y-px" />
             </div>
 
             {!!files && files > 1 && (
-                <div className="text-xs right-1 top-1 absolute px-1 py-0.5 bg-black flex gap-1 items-center justify-center text-white rounded-xs z-2">
+                <div className="text-xs right-1 top-1 absolute px-1 py-0.5 bg-black flex gap-1 items-center justify-center text-white-1 rounded-xs z-2">
                     {files} files
                 </div>
             )}
@@ -34,7 +34,7 @@ export const ThumbnaillessCard: React.FC<ThumbnaillessCardProps> = ({
             <div className="h-32 aspect-video rounded-md  border-white/20 border relative z-1 flex flex-col items-center justify-center">
                 <i className="ri-image-line text-lg opacity-85" />
                 <span className="font-smooch">No Image</span>
-                <div className="text-xs right-1 bottom-1 absolute flex gap-1 items-center justify-center text-white z-2">
+                <div className="text-xs right-1 bottom-1 absolute flex gap-1 items-center justify-center text-white-1 z-2">
                     {type !== ".zip" && (
                         <div className="bg-black rounded-xs px-1 py-0.5">
                             {type}

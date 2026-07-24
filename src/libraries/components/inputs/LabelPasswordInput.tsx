@@ -5,7 +5,7 @@ export const LabelPasswordInput: React.FC = () => {
     const [show, setShow] = useState<boolean>(false);
 
     return (
-        <div className="w-full h-8 flex relative font-barlow">
+        <div className="w-full h-8 flex relative font-fjalla">
             <input
                 className="placeholder:text-start! peer auth__input--default"
                 placeholder=""

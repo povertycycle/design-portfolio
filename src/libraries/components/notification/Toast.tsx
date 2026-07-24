@@ -65,10 +65,10 @@ const Toast: React.FC<ToastProps> = ({ data, duration, remove }) => {
     return createPortal(
         <div
             ref={ref}
-            className={`${styles.toast} text-lg font-barlow overflow-hidden translate-y-4 -translate-x-1/2 transition-transform fixed top-0 left-1/2 max-w-120 text-white rounded-md px-2 z-1000`}
+            className={`${styles.toast} text-lg font-barlow overflow-hidden translate-y-4 -translate-x-1/2 transition-transform fixed top-0 left-1/2 max-w-120 text-white-1 rounded-md px-2 z-1000`}
         >
             <div
-                className={`max-w-mobile flex items-center justify-center gap-2 px-4 py-1 w-fit mx-auto ${color} rounded-md`}
+                className={`max-w-mobile flex items-center justify-center gap-2 px-4 py-0.5 w-fit mx-auto ${color} rounded-md`}
             >
                 <i className={`${remixicon} text-xl/8`} />
                 <span className="mx-4 text-sm/5">{data.message}</span>

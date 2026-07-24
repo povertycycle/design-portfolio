@@ -16,7 +16,7 @@ export const USER_DATA: UserData = {
             },
             title: "Engineer, Designer",
         },
-        avatar: "/img/avatar.jfif",
+        avatar: "/avatar.jfif",
         verification: {
             status: "VERIFIED",
             verifiedAt: "2026-04-14T12:42:01.843Z",

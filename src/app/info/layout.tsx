@@ -6,7 +6,7 @@ export default function InfoLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="w-full h-full overflow-y-auto bg-black text-white font-fjalla flex flex-col">
+        <div className="w-full h-full overflow-y-auto bg-black text-white-1 font-fjalla flex flex-col">
             <LandingHeader />
             {children}
         </div>

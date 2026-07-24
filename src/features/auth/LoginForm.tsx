@@ -1,15 +1,14 @@
 import { UserData } from "@/src/interfaces/user";
-import { USER_DATA } from "@/src/constants/users";
+import { PasswordInput } from "@/src/libraries/components/inputs/PasswordInput";
+import { Spinner } from "@/src/libraries/components/loading/Spinner";
 import { Hyperlink } from "@/src/libraries/components/misc/Hyperlink";
 import useToast from "@/src/libraries/components/notification/Toast";
-import { ChangeEvent, useState } from "react";
-import { LoginPayload } from "./types";
-import { Spinner } from "@/src/libraries/components/loading/Spinner";
-import { AlternativeSignIn } from "./AlternativeSignIn";
-import { PasswordInput } from "@/src/libraries/components/inputs/PasswordInput";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { ChangeEvent, useState } from "react";
+import { AlternativeSignIn } from "./AlternativeSignIn";
 import { ResetPasswordForm } from "./ResetPasswordForm";
+import { LoginPayload } from "./types";
 
 export const LoginForm: React.FC = () => {
     const params = useSearchParams();
@@ -39,7 +38,7 @@ export const Form: React.FC = () => {
     };
 
     return (
-        <div className="border-l-2 shrink-0 border-white/15 w-full relative z-1 text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
+        <div className="border-l-2 shrink-0 border-white/15 w-full relative z-1 text-white-1 flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
             {Toast}
             <span className="text-2xl">Hi, Welcome Back!</span>
             <div className="flex gap-1 items-center font-barlow text-base">
@@ -102,7 +101,7 @@ const Fields: React.FC<{ onSuccess: Function }> = ({ onSuccess }) => {
                         loading
                             ? ""
                             : "not-disabled:cursor-pointer not-disabled:hover:bg-white/95"
-                    } bg-white text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
+                    } bg-white-1 text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
                     onClick={validatePayload}
                 >
                     {loading ? <Spinner /> : "Login"}

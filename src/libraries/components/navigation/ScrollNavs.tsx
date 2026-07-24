@@ -59,7 +59,7 @@ export const ScrollNavs: React.FC<ScrollNavsProps> = ({
         <div className="h-dvh sm:h-screen fixed right-5 top-0 flex flex-col justify-end items-end">
             <div
                 ref={ref}
-                className="bg-gray-300 w-0.5 h-full right-0 flex flex-col items-end justify-end gap-6 text-base font-raleway text-white font-medium"
+                className="bg-gray-300 w-0.5 h-full right-0 flex flex-col items-end justify-end gap-6 text-base font-raleway text-white-1 font-medium"
             >
                 {children}
             </div>
@@ -77,7 +77,7 @@ const SocialMedia: React.FC = () => {
                     <Link
                         href={url}
                         target="_blank"
-                        className="group hover:scale-120 transition-transform border-2 shrink-0 border-white group mr-px rounded-full flex items-center justify-center w-7 h-7 text-white translate-x-1/2"
+                        className="group hover:scale-120 transition-transform border-2 shrink-0 border-white-1 group mr-px rounded-full flex items-center justify-center w-7 h-7 text-white-1 translate-x-1/2"
                     >
                         <span className="group-hover:opacity-100 opacity-60 transition-opacity text-sm">
                             <i className={remixicon} />

@@ -7,11 +7,11 @@ export const LandingHeader: React.FC = () => {
         >
             <Link
                 href="/"
-                className="h-full aspect-square text-white flex items-center justify-center text-2xl px-4"
+                className="h-full aspect-square text-white-1 flex items-center justify-center text-2xl px-4"
             >
                 <i className="ri-home-2-fill" />
             </Link>
-            <div className="h-full relative z-1 flex justify-end py-3 px-12 gap-8 w-full text-white text-lg font-medium">
+            <div className="h-full relative z-1 flex justify-end py-3 px-12 gap-8 w-full text-white-1 text-lg font-medium">
                 <Link href="/designs">
                     <TopMenu title={"Designs"} />
                 </Link>

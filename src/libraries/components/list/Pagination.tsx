@@ -63,7 +63,7 @@ export const Pagination: React.FC<PaginationProps> = ({
     }, [activePage]);
 
     return (
-        <div className="w-lg mx-auto flex mt-auto items-center h-14 shrink-0 font-bold gap-4 text-white py-3 z-3">
+        <div className="w-lg mx-auto flex mt-auto items-center h-14 shrink-0 font-bold gap-4 text-white-1 py-3 z-3">
             <button
                 disabled={activePage <= 1}
                 onClick={activePage <= 1 ? undefined : modify(activePage - 1)}
@@ -95,7 +95,7 @@ export const Pagination: React.FC<PaginationProps> = ({
                 )}
                 <div
                     ref={ref}
-                    className="transition-[left] rounded-full absolute left-0 top-0 bg-white text-black h-full aspect-square flex items-center justify-center"
+                    className="transition-[left] rounded-full absolute left-0 top-0 bg-white-1 text-black h-full aspect-square flex items-center justify-center"
                 >
                     {activePage}
                 </div>

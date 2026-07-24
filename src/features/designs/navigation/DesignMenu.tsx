@@ -3,7 +3,7 @@ import Link from "next/link";
 export const DesignMenu: React.FC = () => {
     return (
         <div className="flex flex-col w-full">
-            <div className="flex flex-col w-full text-white font-fjalla text-lg px-3">
+            <div className="flex flex-col w-full text-white-1 font-fjalla text-lg px-3">
                 <Link
                     href="/designs/categories"
                     className="flex gap-2 items-center px-3 h-10 rounded-sm hover:bg-white/20 w-full"

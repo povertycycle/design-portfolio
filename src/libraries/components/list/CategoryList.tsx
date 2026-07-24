@@ -30,7 +30,7 @@ export const CategoryList: React.FC = () => {
                         onClick={() => setCategory(cat)}
                         className={`h-8 flex items-center px-4 rounded-sm whitespace-nowrap ${
                             cat === category
-                                ? "bg-white text-black"
+                                ? "bg-white-1 text-black"
                                 : " bg-[#333333] cursor-pointer hover:bg-[#404040]"
                         }`}
                         key={cat}

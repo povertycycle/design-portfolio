@@ -1,10 +1,10 @@
-import { Filter } from "@/src/libraries/components/dropdowns/Filter";
-import { NotificationSystem } from "@/src/libraries/components/dropdowns/NotificationSystem";
+import { Notification } from "@/src/libraries/components/dropdowns/Notification";
+import { SortBy } from "@/src/libraries/components/dropdowns/SortBy";
 import { UserMenu } from "@/src/libraries/components/dropdowns/UserMenu";
 
 export const DropdownDesigns: React.FC = () => {
     return (
-        <div className="h-full pb-24 text-white w-full overflow-y-auto sleek-scroll ">
+        <div className="h-full pb-24 text-white-1 w-full overflow-y-auto sleek-scroll ">
             <h1 className="text-2xl px-16 pt-6 pb-6 mb-20 w-full z-50 sticky top-0 bg-black border-b border-white/50">
                 Dropdown Designs
             </h1>
@@ -13,7 +13,7 @@ export const DropdownDesigns: React.FC = () => {
                 <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
                     Dropdown, Notification
                 </span>
-                <NotificationSystem />
+                <Notification />
             </div>
             <div className="my-20 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
@@ -25,11 +25,11 @@ export const DropdownDesigns: React.FC = () => {
             </div>
             <div className="my-20 w-full h-px bg-white/35" />
             <div className="w-lg flex flex-col mx-auto">
-                <span className="my-auto text-xl">Filter Menu</span>
+                <span className="my-auto text-xl">Sort Menu</span>
                 <span className="opacity-75 italic text-sm mt-1 mb-6 font-barlow">
-                    Dropdown, Filter, Options, Close, Values
+                    Dropdown, Sort, Options, Close, Values
                 </span>
-                <Filter
+                <SortBy
                     options={[
                         "Option",
                         "Selection",

@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
                 { url: "/auth/questions", title: "Questions" },
                 { url: "/info/privacy", title: "Privacy" },
             ].map(({ url, title }) => (
-                <Link key={url} className="hover:text-white" href={url}>
+                <Link key={url} className="hover:text-white-1" href={url}>
                     {title}
                 </Link>
             ))}
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
                     <Link
                         href={url}
                         key={remixicon}
-                        className="hover:text-white"
+                        className="hover:text-white-1"
                     >
                         <i className={remixicon} />
                     </Link>

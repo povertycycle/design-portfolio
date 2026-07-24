@@ -1,6 +1,7 @@
 import {
     ButtonHTMLAttributes,
     createContext,
+    CSSProperties,
     HTMLAttributes,
     MouseEvent,
     useContext,
@@ -77,7 +78,11 @@ const CloseButton: React.FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
     );
 };
 
-const Display: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Display: React.FC<{
+    children: React.ReactNode;
+    style?: CSSProperties;
+    className?: string;
+}> = ({ children, style, className }) => {
     const { isFocused, unFocus } = useContext(PopupContext);
 
     return (
@@ -88,7 +93,10 @@ const Display: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     className="w-full h-full absolute top-0 left-0 bg-black/50"
                     onClick={unFocus}
                 />
-                <div className="bg-black z-1 border-2 border-white/20 rounded-2xl w-120 m-auto text-white p-6 font-fjalla flex flex-col">
+                <div
+                    style={style}
+                    className={`bg-black z-1 border-2 border-white/20 rounded-2xl w-120 m-auto text-white-1 p-6 font-fjalla flex flex-col overflow-hidden ${className}`}
+                >
                     {children}
                 </div>
             </div>,

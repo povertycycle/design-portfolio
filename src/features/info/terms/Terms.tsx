@@ -6,7 +6,7 @@ import React from "react";
 export const Terms: React.FC = () => {
     return (
         <div className="w-screen flex flex-col overflow-y-auto sleek-scroll overflow-x-hidden">
-            <div className="max-w-3xl m-auto px-8 py-40 text-white">
+            <div className="max-w-3xl m-auto px-8 py-40 text-white-1">
                 <h1 className="text-4xl tracking-wide font-bold">
                     Terms and Conditions
                 </h1>

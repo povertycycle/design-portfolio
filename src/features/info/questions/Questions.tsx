@@ -13,7 +13,7 @@ export const Questions: React.FC = () => {
             />
             <div className="flex w-full h-full relative bg-black/75">
                 <div className="w-full max-w-5xl mx-auto p-4 sm:p-8 flex flex-col items-center h-full relative">
-                    <div className="flex flex-col text-white items-center mt-12">
+                    <div className="flex flex-col text-white-1 items-center mt-12">
                         <h1 className="text-4xl font-bold tracking-wide">
                             Questions?
                         </h1>

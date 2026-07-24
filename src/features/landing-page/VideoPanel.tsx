@@ -1,7 +1,7 @@
 export const VideoPanel: React.FC = () => {
     return (
         <article className="w-full h-full shrink-0 flex flex-col justify-center items-center relative overflow-hidden">
-            <div className="w-full h-full absolute left-0 top-0 bg-black/35 flex flex-col items-center justify-center text-white">
+            <div className="w-full h-full absolute left-0 top-0 bg-black/35 flex flex-col items-center justify-center text-white-1">
                 <h1 className="text-xl sm:text-8xl font-bold">
                     William Sentosatio
                 </h1>

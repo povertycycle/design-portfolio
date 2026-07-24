@@ -4,7 +4,7 @@ export const Questions: React.FC = () => {
     return (
         <article
             id={`landing-questions`}
-            className="w-screen h-dvh sm:h-screen shrink-0 flex text-white bg-black relative border-t-2 border-white/25"
+            className="w-screen h-dvh sm:h-screen shrink-0 flex text-white-1 bg-black relative border-t-2 border-white/25"
         >
             <div className="absolute w-full h-full z-0">
                 <img
@@ -35,7 +35,7 @@ export const Questions: React.FC = () => {
                                 <i className="group-odd:group-focus/title:rotate-180 group-even:group-focus/title:-rotate-180 transition-transform ri-arrow-down-s-line" />
                             </span>
                             <div
-                                className={`font-barlow peer-focus:max-h-71 mt-5 peer-focus:mb-5 transition-[max-height,margin] max-h-0 overflow-hidden text-white text-base sm:text-xl font-medium`}
+                                className={`font-barlow peer-focus:max-h-71 mt-5 peer-focus:mb-5 transition-[max-height,margin] max-h-0 overflow-hidden text-white-1 text-base sm:text-xl font-medium`}
                             >
                                 {answer}
                             </div>

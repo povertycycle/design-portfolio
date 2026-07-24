@@ -6,6 +6,8 @@
     --font-smooch: 'Smooch Sans', sans-serif;
 	--font-barlow: 'Barlow Semi Condensed', sans-serif;
 
+	--color-white-1: #fafafa;
+	--color-white-4: #999999;
     --color-black-1: #1a1a1a;
 	--color-black-1.5: #262626;
 	--color-black-2.5: #404040;
@@ -21,7 +23,7 @@
     }
 
 	.auth__input--default {
-        @apply placeholder:text-white/60 font-barlow text-base h-8 placeholder:text-end focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-b-white/80 focus:border-b-white transition-colors border-b-white/60 border-b-2 w-full focus:outline-none px-2;
+        @apply font-fjalla placeholder:text-white/60 text-base h-8 placeholder:text-end focus:placeholder:text-white/80 hover:placeholder:text-white/70 hover:border-b-white/80 focus:border-b-white transition-colors border-b-white/60 border-b-2 w-full focus:outline-none px-2;
     }
 
 	.faqs__input--search {
@@ -49,24 +51,52 @@
         }
     }
 
-     .blink {
-         animation: anim-blink 1000ms infinite;
-         @keyframes anim-blink {
-             0% {
-                 opacity: 0;
-             }
-             49% {
-                 opacity: 0;
-             }
-             50% {
-                 opacity: 1;
-             }
-             100% {
-                 opacity: 1;
-             }
-         }
-     }
+	.blink {
+		animation: anim-blink 1000ms infinite;
+		@keyframes anim-blink {
+			0% {
+				opacity: 0;
+			}
+			49% {
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+	
+	.brightness-toggle {
+		@apply transition-[filter];
+		&[data-active="false"] {
+			@apply cursor-pointer brightness-75 hover:brightness-90;
+		}
+		&[data-active="true"] {
+			@apply brightness-100;
+		}
+	}
 
+	.dropdown-container {
+		&[data-dark="false"] {
+			.dropdown-toggle {
+				@apply bg-black/5 hover:bg-black/10 transition-colors;
+			}
+			.dropdown-item {
+				@apply hover:bg-black/5;
+			}
+		} 
+		&[data-dark="true"] {
+			.dropdown-toggle {
+				@apply bg-white/15 hover:bg-white/25 border border-white/15 transition-colors;
+			}
+			.dropdown-item {
+				@apply hover:bg-white/5;
+			}
+		}
+	}
 }
 
 body {
@@ -77,3 +107,6 @@ body {
 		height: 100vh;
 	}
 }
+
+
+

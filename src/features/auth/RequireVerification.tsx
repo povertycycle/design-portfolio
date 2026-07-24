@@ -4,7 +4,7 @@ import React from "react";
 export const RequireVerification: React.FC = () => {
     return (
         <div className="w-160 absolute h-full z-1 flex">
-            <div className="w-full relative z-1 font-barlow text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
+            <div className="w-full relative z-1 font-barlow text-white-1 flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
                 <h1 className="text-2xl font-fjalla">Welcome!</h1>
                 <h2 className="mt-2 text-base text-white/75">
                     You&apos;re just a step away from becoming a part of our

@@ -40,7 +40,7 @@ export const Form: React.FC<RegisterFormProps> = ({ onSuccess }) => {
     };
 
     return (
-        <div className="border-r-2 border-white/15 w-full relative z-1 text-white flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
+        <div className="border-r-2 border-white/15 w-full relative z-1 text-white-1 flex flex-col h-full p-16 justify-center bg-black/75 backdrop-blur-sm">
             {Toast}
             <span className="text-2xl ml-auto">Hello there!</span>
             <div className="flex gap-1 items-center font-medium font-barlow text-base ml-auto">
@@ -106,7 +106,7 @@ const Fields: React.FC<RegisterFormProps> = ({ onSuccess }) => {
                         loading
                             ? ""
                             : "not-disabled:cursor-pointer not-disabled:hover:bg-white/95"
-                    } bg-white text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
+                    } bg-white-1 text-black disabled:bg-white/50 transition-colors rounded-sm px-4 w-32 group font-fjalla text-base py-1 flex items-center justify-center`}
                     onClick={loading ? undefined : validatePayload}
                 >
                     {loading ? <Spinner /> : "Register"}
