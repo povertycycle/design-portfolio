@@ -8,7 +8,7 @@ export default function DesignsLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="w-screen h-screen flex font-fjalla">
+        <div className="w-screen h-screen bg-black flex font-fjalla">
             <Navigation />
             <div className="w-0 grow flex">{children}</div>
         </div>
